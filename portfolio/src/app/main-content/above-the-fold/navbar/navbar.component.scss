@@ -1,0 +1,23 @@
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 56px 120px;
+
+    >div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        >a {
+            text-decoration: none;
+            color: #5988FF;
+            margin-left: 36px;
+            font-size: 23px;
+            font-weight: 400;
+        }
+    }
+}
