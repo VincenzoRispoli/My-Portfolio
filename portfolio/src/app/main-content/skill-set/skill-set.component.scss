@@ -14,6 +14,7 @@
         font-family: 'Baloo';
         margin-block-start: 0;
         margin-block-end: 0;
+        margin-bottom: 32px;
     }
 }
 
@@ -35,6 +36,7 @@
         flex-direction: column;
         align-items: center;
         gap: 10px;
+        transition: all 0.25s cubic-bezier(.215, .61, .355, 1);
 
         >span {
             font-size: 16px;
@@ -60,7 +62,7 @@
         >span {
             font-size: 16px;
             font-weight: 400;
-            color:#fff;
+            color: #fff;
         }
     }
 }

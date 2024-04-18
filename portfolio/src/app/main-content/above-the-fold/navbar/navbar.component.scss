@@ -9,16 +9,22 @@ nav {
 
     >div {
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-evenly;
+        width: 40%;
 
         >a {
             text-decoration: none;
             color: #5988FF;
-            margin-left: 36px;
             font-size: 23px;
             font-weight: 400;
             font-family: 'Montserrat';
+            transition: all 0.15s cubic-bezier(.215, .61, .355, 1);
+
+            &:hover {
+                font-weight: 800
+            }
         }
+
     }
 }
