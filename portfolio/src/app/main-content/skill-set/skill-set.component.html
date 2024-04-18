@@ -1,0 +1,22 @@
+<div class="skill-set-section">
+    <h2>Skill set</h2>
+    <div class="skill-set-wrapper">
+        <div class="skill-set1">
+            @for(skill of skillSet1; track skill){
+            <div class="skill">
+                <img src="../../../assets/icons/{{skill.image}}" alt="">
+                <span>{{skill.tech}}</span>
+            </div>
+            }
+        </div>
+        <div class="skill-set2">
+            @for(skill of skillSet2;track skill){
+            <div class="skill">
+                <img src="../../../assets/icons/{{skill.image}}" alt="">
+                <span>{{skill.tech}}</span>
+            </div>
+            }
+        </div>
+    </div>
+
+</div>

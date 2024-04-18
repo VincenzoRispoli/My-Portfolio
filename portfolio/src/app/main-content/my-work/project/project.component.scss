@@ -1,0 +1,47 @@
+.project {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 120px;
+
+    >img {
+        width: 50%;
+        object-fit: cover;
+    }
+}
+
+.project-infos {
+    width: 45%;
+
+    >h3 {
+        font-size: 45px;
+        font-weight: 800;
+        color: #5988FF;
+        font-family: 'Baloo';
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }
+
+    >span {
+        font-size: 23px;
+        color: #5988FF;
+        font-weight: 400;
+        font-family: 'Montserrat';
+
+    }
+
+    >p {
+        margin-bottom: 35px;
+    }
+
+    >button {
+        border-radius: 10px;
+        padding: 15px 30px;
+        border: 2px solid #5988FF;
+        outline: none;
+        color: #5988FF;
+        background: #fff;
+        font-size: 24px;
+
+    }
+}

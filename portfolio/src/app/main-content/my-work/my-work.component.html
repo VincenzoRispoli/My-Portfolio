@@ -1,0 +1,18 @@
+<div class="my-work-section">
+    <img class="ellipseMyWorkSmall" src="../../../assets/img/ellipseMyWorkSmall.png" alt="">
+    <img class="ellipseMyWorkMedium" src="../../../assets/img/ellipseMediumMyWork.png" alt="">
+    <div class="my-work-container">
+        <h2>My Work</h2>
+        <p>Explore a selection of my work here - Interact with projects to see my skills in action.</p>
+    </div>
+
+    <div class="projects-container">
+        @for(project of projectsList; track project; let index = $index){
+        <app-project [project]="project"></app-project>
+        }
+    </div>
+
+
+
+
+</div>
