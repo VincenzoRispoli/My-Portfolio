@@ -4,16 +4,25 @@
     <div class="wrapper">
         <div class="contact-info">
             <h3>Got a problem to solve?</h3>
-            <p class="contact-me-content">Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to
+            <p class="contact-me-content">Contact me through this form, I am interested in hearing from you, knowing
+                your ideas and contributing to
                 your projects with my work.
             </p>
             <p class="call-to-action">Need a Frontend developer? <b>Contact me!</b></p>
         </div>
-        <form class="contact-form">
-            <input class="input-name" type="text" placeholder="Your Name">
-            <input class="input-email" type="text" placeholder="Your E-Mail">
-            <textarea class="textarea" name="" id="" cols="30" rows="10" placeholder="Your message"></textarea>
-            <span class="checkbox-container"><input class="input-checkbox" type="checkbox">I've read the privacy policy and agree to the processing of my data as outlined</span>
+        <form class="contact-form" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+            <input [(ngModel)]="contactData.name" name="name" class="input-name" type="text" placeholder="Your Name"
+                required>
+            <input [(ngModel)]="contactData.email" name="email" class="input-email" type="email"
+                placeholder="Your E-Mail" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+            <textarea #message="ngModel" [(ngModel)]="contactData.message" type="text" class="textarea" name="message"
+                id="message" minlength="3" cols="30" rows="10" placeholder="Your message" required></textarea>
+            @if(!message.valid && message.touched){
+            <span>Please enter a message</span>
+            }
+            <span class="checkbox-container"><input class="input-checkbox" type="checkbox" required>I've read the
+                privacy policy
+                and agree to the processing of my data as outlined</span>
             <button>Say Hello! </button>
         </form>
     </div>
