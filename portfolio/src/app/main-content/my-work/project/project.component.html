@@ -4,6 +4,6 @@
         <h3>{{project.title}}</h3>
         <span>{{project.technologies}}</span>
         <p>{{project.description}}</p>
-        <button>Github</button>
+        <a [class.fill-button]="isHover" (mouseover)="onHover()" (mouseleave)="onLeave()" href="">Github</a>
     </div>
 </div>

@@ -40,6 +40,8 @@
         }
 
         >a {
+            position: relative;
+            // overflow: hidden;
             background: #fff;
             text-decoration: none;
             border-radius: 10px;
@@ -48,10 +50,7 @@
             font-size: 24px;
             color: #5888FF;
             font-family: 'Montserrat';
-
-            &:hover {
-                cursor: pointer;
-            }
+            cursor: pointer;
         }
     }
 }
@@ -63,4 +62,37 @@
     position: absolute;
     bottom: -54px;
     right: 250px;
+}
+
+.fill-button::before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content: "Send a message";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: rgb(89, 136, 255);
+    background: radial-gradient(circle, rgba(89, 136, 255, 1) 0%, rgba(89, 136, 255, 1) 54%, rgba(0, 67, 240, 1) 86%);
+    color: #fff;
+    font-size: 24px;
+    border-radius: 10px;
+    animation: fillAnimation 0.09s forwards;
+    /* Duration and direction of animation */
+}
+
+
+@keyframes fillAnimation {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+        transform: scale(1.1) translateX(10px);
+        background: rgb(89, 136, 255);
+        background: radial-gradient(circle, rgba(89, 136, 255, 1) 0%, rgba(89, 136, 255, 1) 54%, rgba(0, 67, 240, 1) 86%);
+    }
 }

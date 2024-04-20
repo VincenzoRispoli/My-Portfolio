@@ -37,14 +37,47 @@
         margin-bottom: 35px;
     }
 
-    >button {
+    >a {
         border-radius: 10px;
         padding: 15px 30px;
         border: 2px solid #5988FF;
-        outline: none;
         color: #5988FF;
         background: #fff;
         font-size: 24px;
-
+        text-decoration: none;
+        position: relative;
     }
+}
+
+@keyframes fillAnimation {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+        transform: scale(1.1);
+        background: rgb(89, 136, 255);
+        background: radial-gradient(circle, rgba(89, 136, 255, 1) 0%, rgba(89, 136, 255, 1) 54%, rgba(0, 67, 240, 1) 86%);
+    }
+}
+
+
+.fill-button::before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content: "Github";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: rgb(89, 136, 255);
+    background: radial-gradient(circle, rgba(89, 136, 255, 0.5608368347338936) 0%, rgba(89, 136, 255, 0.7597163865546218) 54%, rgba(0, 67, 240, 0.7401085434173669) 86%);
+    color: #fff;
+    font-size: 24px;
+    border-radius: 10px;
+    animation: fillAnimation 0.10s forwards;
+    /* Duration and direction of animation */
 }

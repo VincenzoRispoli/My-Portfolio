@@ -11,4 +11,14 @@ import { Component } from '@angular/core';
 })
 export class IntroductionComponent {
 
+  isHover:boolean = false;
+
+  onHover(){
+    this.isHover = true
+  }
+
+  onLeave(){
+    this.isHover = false
+  }
+
 }
