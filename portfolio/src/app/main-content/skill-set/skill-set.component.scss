@@ -36,7 +36,11 @@
         flex-direction: column;
         align-items: center;
         gap: 10px;
-        transition: all 0.25s cubic-bezier(.215, .61, .355, 1);
+        cursor: pointer;
+
+        >img {
+            transition: all 0.25s cubic-bezier(.215, .61, .355, 1);
+        }
 
         >span {
             font-size: 16px;
@@ -58,11 +62,67 @@
         flex-direction: column;
         align-items: center;
         gap: 10px;
+        cursor: pointer;
+
+        >img {
+            transition: all 0.3s cubic-bezier(.215, .61, .355, 1);
+        }
 
         >span {
             font-size: 16px;
             font-weight: 400;
             color: #fff;
         }
+    }
+}
+
+.translateY {
+    transform: translateY(-10px);
+}
+
+.textBold {
+    font-weight: 700;
+}
+
+.fill-button {
+    position: relative;
+    overflow: hidden;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.fill-button::before {
+    content: "hei";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #2ecc71;
+    /* Colore del riempimento */
+    animation: fillAnimation 1s forwards;
+    /* Durata e direzione dell'animazione */
+}
+
+@keyframes fillAnimation {
+    0% {
+        width: 0%;
+    }
+
+    25% {
+        width: 25%;
+    }
+
+
+    50% {
+        width: 50%;
+    }
+
+    100% {
+        width: 100%;
     }
 }

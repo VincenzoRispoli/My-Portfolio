@@ -6,6 +6,11 @@ nav {
     display: flex;
     justify-content: space-between;
     padding: 56px 120px;
+    z-index: 1;
+    >img{
+        height: 48px;
+        object-fit: cover;
+    }
 
     >div {
         display: flex;

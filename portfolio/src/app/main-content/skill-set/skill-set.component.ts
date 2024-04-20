@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-skill-set',
@@ -9,6 +9,21 @@ import { Component } from '@angular/core';
   styleUrl: './skill-set.component.scss'
 })
 export class SkillSetComponent {
+  translationY: boolean[] = [];
+  translationY2: boolean[] = [];
+
+  ngOnInit() {
+    this.skillSet1.forEach(() => {
+      this.translationY.push(false)
+    })
+    console.log(this.translationY);
+
+    this.skillSet2.forEach(() => {
+      this.translationY2.push(false);
+    })
+    console.log(this.translationY2);
+  }
+
   skillSet1 = [
     { image: 'css.svg', tech: 'CSS' },
     { image: 'html.svg', tech: 'HTML' },
@@ -22,6 +37,22 @@ export class SkillSetComponent {
     { image: 'firebase.svg', tech: 'Firebase' },
     { image: 'material.svg', tech: 'Material Design' },
     { image: 'git.svg', tech: 'Git' }
-  ]
+  ];
+
+  getTranslation(index: number) {
+    this.translationY[index] = true;
+  }
+
+  getTranslation2(index: number) {
+    this.translationY2[index] = true;
+  }
+
+  getTranslationBack(index:number){
+    this.translationY[index] = false;
+  }
+
+  getTranslationBack2(index:number){
+    this.translationY2[index] = false;
+  }
 
 }

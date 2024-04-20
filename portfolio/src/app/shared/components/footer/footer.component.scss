@@ -1,7 +1,6 @@
 .footer {
     background-color: #5988FF;
     background: linear-gradient(90deg, rgba(89, 136, 255, 1) 0%, rgba(89, 136, 255, 0.8381477591036415) 0%, rgba(0, 67, 240, 0.6392682072829132) 0%);
-    height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,10 +8,16 @@
     padding: 56px;
 
     >div {
+
         display: flex;
         align-items: center;
         justify-content: space-between;
         width: 100%;
+
+        >.logo {
+            width: 200px;
+            object-fit: cover;
+        }
 
         >img {
             width: 30%;
