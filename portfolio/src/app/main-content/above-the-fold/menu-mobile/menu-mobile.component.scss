@@ -11,6 +11,7 @@
     z-index: 4;
     background: #fff;
     transition: all 0.4s cubic-bezier(.215, .61, .355, 1);
+    transform: translateY(-100%);
 
     >.logo-container {
         width: 100%;
@@ -34,12 +35,12 @@
     }
 }
 
+.traslationY {
+    transform: translateY(0)
+}
+
 @media (min-width: 768px) {
     .menu-mobile {
         display: none;
     }
-}
-
-.traslationY {
-    transform: translateY(-100px)
 }

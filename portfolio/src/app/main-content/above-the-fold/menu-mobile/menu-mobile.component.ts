@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-menu-mobile',
@@ -9,5 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './menu-mobile.component.scss'
 })
 export class MenuMobileComponent {
-  
+
+  @Input()translate:boolean = false;
+
 }

@@ -1,6 +1,6 @@
 <div class="hero-section">
-    <app-menu-mobile></app-menu-mobile>
-    <app-navbar></app-navbar>
+    <app-menu-mobile [translate]="translate"></app-menu-mobile>
+    <app-navbar (hamburgerClicked)="receveEvent($event)"></app-navbar>
     <img class="ellipseHero" src="../../../assets/img/ellipseHero.svg" alt="">
     <img class="me" src="../../../assets/img/me.png" alt="">
     <div class="wrapper">

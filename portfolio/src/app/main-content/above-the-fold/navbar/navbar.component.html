@@ -5,9 +5,9 @@
         <a href="#skill-set">Skill set</a>
         <a href="#my-work">My Work</a>
     </div>
-    <div class="hamburger-menu">
-        <span></span>
-        <span></span>
-        <span></span>
+    <div (click)="onHamburgerClick()" class="hamburger-menu">
+        <span [ngClass]="{rotateToRight: isClicked}"></span>
+        <span [ngStyle]="{'display': isClicked ? 'none': '',}"></span>
+        <span [ngClass]="{rotateToLeft: isClicked}"></span>
     </div>
 </nav>
