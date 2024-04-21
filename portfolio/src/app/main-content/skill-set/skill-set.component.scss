@@ -9,7 +9,7 @@
     >h2 {
         text-align: center;
         color: #fff;
-        font-size: 96px;
+        font-size: 6.2vw;
         font-weight: 400px;
         font-family: 'Baloo';
         margin-block-start: 0;
@@ -22,7 +22,7 @@
     display: flex;
     flex-direction: column;
     gap: 47px;
-    width: 60%;
+    width: 70%;
 }
 
 .skill-set1 {
@@ -82,4 +82,34 @@
 
 .textBold {
     font-weight: 700;
+}
+
+@media screen and (min-width: 1200px) {
+    .skill-set-section {
+        >h2 {
+            font-size: 96px;
+        }
+    }
+}
+
+@media (max-width: 1050px) {
+    .skill-set-wrapper {
+        width: 100%;
+    }
+
+    .skill-set1 {
+        >.skill {
+            >img {
+                height: 64px;
+            }
+        }
+    }
+
+    .skill-set2 {
+        >.skill {
+            >img {
+                height: 64px;
+            }
+        }
+    }
 }

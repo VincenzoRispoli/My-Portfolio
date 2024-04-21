@@ -14,6 +14,11 @@
 
 .project-infos {
     width: 45%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
     z-index: 1;
 
     >h3 {
@@ -34,6 +39,8 @@
     }
 
     >p {
+        margin-block-start: 0;
+        margin-block-end: 0;
         margin-bottom: 35px;
     }
 
@@ -80,4 +87,12 @@
     border-radius: 10px;
     animation: fillAnimation 0.10s forwards;
     /* Duration and direction of animation */
+}
+
+@media (max-width: 1050px) {
+    .project-infos {
+        >h3 {
+            font-size: 32px;
+        }
+    }
 }

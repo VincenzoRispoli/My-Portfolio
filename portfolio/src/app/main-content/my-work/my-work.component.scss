@@ -7,7 +7,7 @@
     width: 50%;
 
     >h2 {
-        font-size: 96px;
+        font-size: 6.2vw;
         color: #5988FF;
         font-weight: 800;
         font-family: 'Baloo';
@@ -31,7 +31,7 @@
 .ellipseMyWorkMedium {
     position: absolute;
     top: 96px;
-    right: 230px;
+    right: 150px;
 }
 
 .ellipseHalfMyWork {
@@ -46,8 +46,16 @@
     top: 800px;
 }
 
-.ellipseSmallestMyWork{
+.ellipseSmallestMyWork {
     position: absolute;
     left: 100px;
-    top: 1300px;
+    top: 1175px;
+}
+
+@media screen and (min-width: 1200px) {
+    .my-work-container {
+        >h2 {
+            font-size: 96px;
+        }
+    }
 }
