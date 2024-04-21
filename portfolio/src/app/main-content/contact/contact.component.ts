@@ -13,11 +13,31 @@ import { FormsModule, NgForm } from '@angular/forms';
 })
 export class ContactComponent {
 
+  updateCheckbox: boolean = false;
+  buttonIsDisabled: boolean = true;
+  checked = false;
+
+  borderGray = '1px solid #bbb';
+  borderBlue = '1px solid #5988FF';
+  colorGray = '#bbb';
+  colorBlue = '#5988FF'
+
   http = inject(HttpClient);
   contactData = {
     name: '',
     email: '',
-    message: ''
+    message: '',
+  }
+
+  updateButtonState(checked: any) {
+    if (checked.currentTarget.checked) {
+      this.checked = true
+      this.buttonIsDisabled = false;
+    } else if (!checked.currentTarget.checked) {
+      this.checked = false;
+      this.buttonIsDisabled = true;
+    }
+
   }
 
   mailTest = true;
@@ -51,10 +71,4 @@ export class ContactComponent {
       ngForm.resetForm();
     }
   }
-
-  // onSubmit(ngForm: NgForm) {
-  //   if (ngForm.valid && ngForm.submitted) {
-  //     console.log(this.contactData);
-  //   }
-  // }
 }

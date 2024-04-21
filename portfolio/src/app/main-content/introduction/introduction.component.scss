@@ -14,7 +14,7 @@
 
     >h2 {
         font-family: 'Baloo';
-        font-size: 121px;
+        font-size: 6.2vw;
         font-weight: 800;
         color: #5988FF;
         line-height: 1;
@@ -37,6 +37,9 @@
             font-size: 24px;
             font-family: 'Montserrat';
             font-weight: 400;
+            margin-block-start: 0;
+            margin-block-end: 0;
+            margin-bottom: 32px;
         }
 
         >a {
@@ -94,5 +97,18 @@
         transform: scale(1.1) translateX(10px);
         background: rgb(89, 136, 255);
         background: radial-gradient(circle, rgba(89, 136, 255, 1) 0%, rgba(89, 136, 255, 1) 54%, rgba(0, 67, 240, 1) 86%);
+    }
+}
+
+@media (max-width: 1050px) {
+    .letsWorkTogether-container {
+        >.description-container {
+            width: 70%;
+        }
+
+    }
+
+    .ellipseIntroSmall {
+        right: 150px;
     }
 }

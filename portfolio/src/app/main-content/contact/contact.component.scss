@@ -94,12 +94,12 @@
 
     >button {
         background: #fff;
-        border: 2px solid rgba(187, 187, 187, 1);
+        border: 2px solid #5988FF;
         border-radius: 10px;
         font-size: 24px;
         outline: none;
         padding: 15px 30px;
-        color: rgba(187, 187, 187, 1);
+        color: #5988FF;
 
         &:hover {
             cursor: pointer;
@@ -115,6 +115,9 @@
     >.input-checkbox {
         height: 24px;
         width: 24px;
+        border: 1px solid #5988FF;
+        background: #fff;
+        position: relative;
     }
 }
 
@@ -123,3 +126,4 @@
     top: 675px;
     right: 70px;
 }
+

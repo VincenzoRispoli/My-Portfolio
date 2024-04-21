@@ -20,10 +20,24 @@
             @if(!message.valid && message.touched){
             <span>Please enter a message</span>
             }
-            <span class="checkbox-container"><input class="input-checkbox" type="checkbox" required>I've read the
+            <label class="checkbox-container">
+                <input name="checkbox" #checkbox="ngModel" [ngModel]="checked" (change)="updateButtonState($event)"
+                    class="input-checkbox" type="checkbox" required>
+                <span class="checkmark"></span>
+                I've
+                read the
                 privacy policy
-                and agree to the processing of my data as outlined</span>
-            <button>Say Hello! </button>
+                and agree to the processing of my data as outlined
+            </label>
+            @if(!checkbox.valid && contactForm.submitted){
+            <span [ngStyle]="{'text-align': 'start', 'width':'100%',}">Please check the <a style="color: #5988FF;"
+                    href="#privacypolicy">privacy policy</a></span>
+            }
+            <button
+                [ngStyle]="{'border': buttonIsDisabled ? borderGray : borderBlue, 'color': buttonIsDisabled ? colorGray : colorBlue}"
+                [disabled]="buttonIsDisabled">SayHello!</button>
         </form>
     </div>
 </div>
+
+<!-- [ngStyle]="{'border': buttonIsDisabled ? borderGray : borderBlue, 'color': buttonIsDisabled ? colorGray : colorBlue}" -->

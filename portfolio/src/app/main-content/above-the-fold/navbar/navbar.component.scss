@@ -5,9 +5,10 @@ nav {
     right: 0;
     display: flex;
     justify-content: space-between;
-    padding: 56px 120px;
+    padding: 56px 84px;
     z-index: 1;
-    >img{
+
+    >img {
         height: 48px;
         object-fit: cover;
     }
@@ -15,7 +16,8 @@ nav {
     >div {
         display: flex;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: space-between;
+        gap: 23px;
         width: 40%;
 
         >a {
@@ -31,5 +33,15 @@ nav {
             }
         }
 
+    }
+}
+
+@media (max-width: 1050px) {
+    nav {
+        padding: 32px 24px;
+
+        >div {
+            width: 50%;
+        }
     }
 }
