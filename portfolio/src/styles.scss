@@ -18,6 +18,13 @@ body {
     border: 1px solid #5988FF;
 }
 
+@media (max-width: 1050px) {
+
+    body {
+        width: 100%;
+    }
+}
+
 @font-face {
     font-family: 'Montserrat';
     font-style: normal;
