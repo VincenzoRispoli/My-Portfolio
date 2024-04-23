@@ -1,7 +1,6 @@
-<div [ngStyle]="{'flex-direction': project.title  == 'El Pollo Loco' ? rowReverse : row}" class="project">
+<div [ngClass]="{rowReverse: project.title == 'El Pollo Loco'}" class="project">
     <img src="../../../../assets/img/{{project.image}}" alt="">
-    <div [ngStyle]="{'align-items': project.title == 'El Pollo Loco' ? 'flex-end': 'flex-start','text-align': project.title == 'El Pollo Loco' ? 'end':'start'}"
-        class="project-infos">
+    <div [ngClass]="{flexEnd: project.title == 'El Pollo Loco'}" class="project-infos">
         <h3>{{project.title}}</h3>
         <span>{{project.technologies}}</span>
         <p>{{project.description}}</p>

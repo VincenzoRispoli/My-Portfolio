@@ -29,10 +29,10 @@
 .skill-set {
     display: flex;
     justify-content: space-evenly;
-    width: 765px;
+    width: 100%;
     flex-wrap: wrap;
     align-items: center;
-    gap: 75px;
+    gap: 80px;
 
     >.skill {
         display: flex;
@@ -40,6 +40,7 @@
         align-items: center;
         gap: 10px;
         cursor: pointer;
+        width: 10%;
 
         >img {
             transition: all 0.25s cubic-bezier(.215, .61, .355, 1);
@@ -49,6 +50,7 @@
             font-size: 16px;
             font-weight: 400;
             color: #fff;
+            text-align: center;
         }
     }
 }
@@ -70,23 +72,47 @@
 }
 
 @media (max-width: 1050px) {
+    .skill-set-section {
+        padding: 48px 32px;
+    }
+
     .skill-set-wrapper {
         width: 100%;
     }
 
-    .skill-set1 {
+    .skill-set {
+        width: 100%;
+        gap: 80px;
+
         >.skill {
             >img {
                 height: 64px;
             }
         }
     }
+}
 
-    .skill-set2 {
+@media (max-width: 768px) {
+    .skill-set {
+        width: 100%;
+        gap: 60px;
+
         >.skill {
-            >img {
-                height: 64px;
-            }
+            width: 20%;
+        }
+    }
+}
+
+@media (max-width: 430px) {
+    .skill-set-section {
+        padding: 32px 16px;
+    }
+
+    .skill-set {
+        gap: 30px;
+
+        >.skill {
+            width: 30%;
         }
     }
 }

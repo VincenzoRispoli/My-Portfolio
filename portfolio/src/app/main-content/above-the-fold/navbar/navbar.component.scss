@@ -40,6 +40,8 @@ nav {
             font-weight: 400;
             font-family: 'Montserrat';
             transition: all 0.15s cubic-bezier(.215, .61, .355, 1);
+            width: 30%;
+            text-align: center;
 
             &:hover {
                 font-weight: 800
@@ -102,6 +104,6 @@ nav {
     transform: rotate(-45deg) translateY(-7px);
 }
 
-.Dnone{
+.Dnone {
     display: none;
 }

@@ -9,8 +9,6 @@ import { Component, Input } from '@angular/core';
   styleUrl: './project.component.scss'
 })
 export class ProjectComponent {
-  rowReverse = 'row-reverse';
-  row = 'row';
   isHover: boolean = false;
 
   @Input() project = {

@@ -39,8 +39,6 @@
             font-weight: 400;
             color: #5988FF
         }
-
-        ;
     }
 }
 
@@ -132,5 +130,76 @@
         >h2 {
             font-size: 96px;
         }
+    }
+}
+
+@media (max-width: 1050px) {
+    .ellipseSmallContact {
+        top: 700px;
+        right: 24px;
+        height: 50px;
+    }
+
+    .wrapper {
+        >.contact-info {
+            width: 45%;
+        }
+    }
+
+    .contact-form {
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 32px;
+
+        >h2 {
+            font-size: 64px;
+        }
+    }
+
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+
+        >.contact-info {
+            width: 100%;
+            margin-bottom: 16px;
+
+            >h3 {
+                font-size: 32px;
+            }
+        }
+
+        >.contact-form {
+            width: 100%;
+        }
+    }
+
+    .ellipseSmallContact {
+        top: 827px;
+        z-index: -1;
+    }
+}
+
+@media (max-width: 430px) {
+    .contact-section {
+        >h2 {
+            font-size: 48px;
+        }
+    }
+
+    .wrapper {
+        >.contact-info {
+            >h3 {
+                font-size: 24px;
+            }
+        }
+    }
+
+    .ellipseSmallContact {
+        top: 850px;
     }
 }
