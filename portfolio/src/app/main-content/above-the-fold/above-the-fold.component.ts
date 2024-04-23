@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MenuMobileComponent } from './menu-mobile/menu-mobile.component';
 
@@ -13,9 +13,5 @@ import { MenuMobileComponent } from './menu-mobile/menu-mobile.component';
 })
 export class AboveTheFoldComponent {
 
-  translate: boolean = false;
-
-  receveEvent(event: boolean) {
-    this.translate = event;
-  }
 }
+

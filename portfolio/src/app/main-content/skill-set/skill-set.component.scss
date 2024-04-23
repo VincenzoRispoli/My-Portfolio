@@ -21,15 +21,18 @@
 .skill-set-wrapper {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 47px;
     width: 70%;
 }
 
-.skill-set1 {
+.skill-set {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    width: 765px;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 32px;
+    gap: 75px;
 
     >.skill {
         display: flex;
@@ -40,32 +43,6 @@
 
         >img {
             transition: all 0.25s cubic-bezier(.215, .61, .355, 1);
-        }
-
-        >span {
-            font-size: 16px;
-            font-weight: 400;
-            color: #fff;
-        }
-    }
-}
-
-.skill-set2 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 32px;
-
-
-    >.skill {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        cursor: pointer;
-
-        >img {
-            transition: all 0.3s cubic-bezier(.215, .61, .355, 1);
         }
 
         >span {

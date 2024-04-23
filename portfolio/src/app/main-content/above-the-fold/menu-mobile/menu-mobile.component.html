@@ -1,11 +1,8 @@
-<nav [class.traslationY]="translate" class="menu-mobile">
-    <div class="logo-container">
-        <img style="height: 32px;" class="logo-menu-mobile" src="../../../../assets/img/logo.png" alt="">
-    </div>
+<nav [class.traslationY]="menuMobile.translateY" class="menu-mobile">
     <div class="links-container">
-        <a href="#about-me">About Me</a>
-        <a href="">Skill Set</a>
-        <a href="">My Work</a>
-        <a href="">Contact</a>
+        <a (click)="menuMobile.onLinkClicked()" href="#letsWork">About Me</a>
+        <a (click)="menuMobile.onLinkClicked()" href="#skill-set">Skill Set</a>
+        <a (click)="menuMobile.onLinkClicked()" href="#my-work">My Work</a>
+        <a (click)="menuMobile.onLinkClicked()" href="#contact">Contact</a>
     </div>
 </nav>

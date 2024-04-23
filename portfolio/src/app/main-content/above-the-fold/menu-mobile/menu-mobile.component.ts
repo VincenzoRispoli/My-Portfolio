@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input} from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { MenuMobileService } from '../../../menu-mobile.service';
 
 @Component({
   selector: 'app-menu-mobile',
@@ -10,6 +11,7 @@ import { Component, Input} from '@angular/core';
 })
 export class MenuMobileComponent {
 
-  @Input()translate:boolean = false;
+  menuMobile = inject(MenuMobileService);
+
 
 }

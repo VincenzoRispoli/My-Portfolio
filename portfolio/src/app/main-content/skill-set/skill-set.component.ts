@@ -17,10 +17,6 @@ export class SkillSetComponent {
       this.translationY.push(false)
     })
     console.log(this.translationY);
-
-    this.skillSet2.forEach(() => {
-      this.translationY2.push(false)
-    })
   }
 
   skillSet = [
@@ -29,32 +25,21 @@ export class SkillSetComponent {
     { image: 'javascript.svg', tech: 'Javascript' },
     { image: 'typescript.svg', tech: 'Typescript' },
     { image: 'api.svg', tech: 'API' },
-  ];
-
-  skillSet2 = [
     { image: 'scrum.svg', tech: 'Scrum' },
     { image: 'angular.svg', tech: 'Angular' },
     { image: 'firebase.svg', tech: 'Firebase' },
     { image: 'material.svg', tech: 'Material Design' },
     { image: 'git.svg', tech: 'Git' }
-  ]
+  ];
 
   getTranslation(index: number) {
     this.translationY[index] = true;
   }
 
-  getTranslation2(index: number) {
-    this.translationY2[index] = true;
-  }
-
-
   getTranslationBack(index: number) {
     this.translationY[index] = false;
   }
 
-  getTranslationBack2(index: number) {
-    this.translationY2[index] = false;
-  }
 
 
 }

@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { MenuMobileService } from '../../../menu-mobile.service';
 
 
 @Component({
@@ -10,13 +11,11 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
- 
-  isClicked:boolean = false
 
-  @Output() hamburgerClicked = new EventEmitter<boolean>();
+  menuService = inject(MenuMobileService);
 
-  onHamburgerClick() {
-    this.isClicked = !this.isClicked;
-    this.hamburgerClicked.emit(this.isClicked);
+  openMenu(){
+    this.menuService.openMenuInNavbar();
   }
 }
+

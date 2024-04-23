@@ -1,19 +1,11 @@
 <div class="skill-set-section">
     <h2>Skill set</h2>
     <div class="skill-set-wrapper">
-        <div class="skill-set1">
+        <div class="skill-set">
             @for(skill of skillSet; track skill; let index = $index){
             <div (mouseover)="getTranslation(index)" (mouseleave)="getTranslationBack(index)" class=" skill">
                 <img [class.translateY]="translationY[index]" src="../../../assets/icons/{{skill.image}}" alt="">
                 <span [ngStyle]="{'font-weight': translationY[index] ? 700 : 400 }">{{skill.tech}}</span>
-            </div>
-            }
-        </div>
-        <div class="skill-set2">
-            @for(skill of skillSet2;track skill; let index = $index){
-            <div (mouseover)="getTranslation2(index)" (mouseleave)="getTranslationBack2(index)" class="skill">
-                <img [class.translateY]="translationY2[index]" src="../../../assets/icons/{{skill.image}}" alt="">
-                <span [ngStyle]="{'font-weight': translationY2[index] ? 700 : 400 }">{{skill.tech}}</span>
             </div>
             }
         </div>

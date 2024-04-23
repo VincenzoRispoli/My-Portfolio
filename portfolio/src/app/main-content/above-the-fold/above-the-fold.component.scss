@@ -134,7 +134,7 @@
             position: absolute;
             bottom: 0;
             left: 48px;
-            height: 500px;
+            height: 350px;
         }
     }
 
@@ -148,7 +148,7 @@
         padding: 0 16px;
 
         >.titles {
-            margin-top: 200px;
+            margin-top: 150px;
 
             >h1 {
                 color: #fff;
@@ -178,7 +178,7 @@
             position: static;
             left: 0px;
             height: auto;
-            width: 300px;
+            width: 350px;
             z-index: 2;
         }
     }
@@ -198,4 +198,14 @@
         }
     }
 
+}
+
+@media (max-width: 380px) {
+    .hero-section {
+
+        >.me {
+            height: auto;
+            width: 300px;
+        }
+    }
 }

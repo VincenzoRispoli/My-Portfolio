@@ -1,3 +1,9 @@
+@mixin flexCenter() {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 @mixin menuBarsStyle() {
     display: block;
     background: #5988FF;
@@ -11,9 +17,7 @@ nav {
     top: 0;
     left: 0;
     right: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flexCenter();
     padding: 56px 84px;
     z-index: 5;
 
@@ -96,4 +100,8 @@ nav {
 
 .rotateToLeft {
     transform: rotate(-45deg) translateY(-7px);
+}
+
+.Dnone{
+    display: none;
 }

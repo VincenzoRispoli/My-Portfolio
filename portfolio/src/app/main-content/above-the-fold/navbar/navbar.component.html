@@ -1,13 +1,13 @@
 <nav>
-    <img src="../../../../assets/img/logo.png" alt="LOGO">
+    <img src="../../../../assets/img/logo2.png" alt="LOGO">
     <div class="menu-desktop">
         <a href="#letsWork">About me</a>
         <a href="#skill-set">Skill set</a>
         <a href="#my-work">My Work</a>
     </div>
-    <div (click)="onHamburgerClick()" class="hamburger-menu">
-        <span [ngClass]="{rotateToRight: isClicked}"></span>
-        <span [ngStyle]="{'display': isClicked ? 'none': '',}"></span>
-        <span [ngClass]="{rotateToLeft: isClicked}"></span>
+    <div (click)="openMenu()" class="hamburger-menu">
+        <span [ngClass]="{rotateToRight: menuService.translateY}"></span>
+        <span [ngStyle]="{'display': menuService.translateY ? 'none' : ''}"></span>
+        <span [ngClass]="{rotateToLeft: menuService.translateY}"></span>
     </div>
 </nav>
