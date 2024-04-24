@@ -3,6 +3,12 @@
     margin-block-end: 0;
 }
 
+@mixin flexCenter() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .footer {
     background-color: #5988FF;
     background: linear-gradient(90deg, rgba(89, 136, 255, 1) 0%, rgba(89, 136, 255, 0.8381477591036415) 0%, rgba(0, 67, 240, 0.6392682072829132) 0%);
@@ -12,7 +18,7 @@
 
     padding: 56px;
 
-    >div {
+    >.logoCopySocial-container {
 
         display: flex;
         align-items: center;
@@ -20,9 +26,7 @@
         width: 100%;
 
         >.logo-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include flexCenter();
             width: 25%;
 
             >.logo {
@@ -55,16 +59,20 @@
     }
 }
 
-.imprint {
-    text-align: center;
-    padding: 5px 10px;
-    color: #fff;
-    font-size: 24px;
+.imprint-wrapper {
+    @include flexCenter();
+
+    a {
+        padding: 5px 10px;
+        color: #fff;
+        font-size: 24px;
+        text-decoration: none;
+    }
 }
 
 @media (max-width: 1050px) {
     .footer {
-        >div {
+        >.logoCopySocial-container {
             .logo-container {
                 >.logo {
                     width: 120px;
@@ -82,7 +90,7 @@
     .footer {
         padding: 48px 0;
 
-        >div {
+        >.logoCopySocial-container {
             flex-direction: column;
             align-items: center;
             gap: 24px;
@@ -99,9 +107,7 @@
 
             >span {
                 width: 100%;
-                align-items: center;
-                justify-content: center;
-                width: 100%;
+                @include flexCenter();
             }
         }
 

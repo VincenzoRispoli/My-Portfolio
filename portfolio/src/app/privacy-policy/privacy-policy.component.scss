@@ -1,0 +1,49 @@
+div {
+    padding: 16px;
+
+    >.back {
+        >a {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            text-decoration: none;
+            color: #5988FF;
+            font-size: 24px;
+            cursor: pointer;
+
+            &:hover {
+                font-weight: 700;
+            }
+
+            >.arrow-left {
+                height: 32px;
+                object-fit: contain;
+                cursor: pointer;
+                transition: all 0.3s cubic-bezier(.215, .61, .355, 1);
+            }
+
+        }
+    }
+}
+
+@media (max-width: 430px) {
+    div {
+        padding: 8px;
+
+        >h1 {
+            font-size: 24px;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+
+        h3 {
+            font-size: 18px;
+        }
+    }
+}
+
+.translateX {
+    transform: translateX(-10px);
+}

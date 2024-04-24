@@ -26,12 +26,11 @@
                 <span class="checkmark"></span>
                 I've
                 read the
-                privacy policy
+                <a style="color: #5988FF;" href="privacy-policy">privacy policy</a>
                 and agree to the processing of my data as outlined
             </label>
             @if(!checkbox.valid && contactForm.submitted){
-            <span [ngStyle]="{'text-align': 'start', 'width':'100%',}">Please check the <a style="color: #5988FF;"
-                    href="#privacypolicy">privacy policy</a></span>
+            <span [ngStyle]="{'text-align': 'start', 'width':'100%',}">Please check the</span>
             }
             <button
                 [ngStyle]="{'border': buttonIsDisabled ? borderGray : borderBlue, 'color': buttonIsDisabled ? colorGray : colorBlue}"
