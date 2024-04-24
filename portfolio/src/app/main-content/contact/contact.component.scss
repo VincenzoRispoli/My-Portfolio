@@ -50,73 +50,152 @@
     width: 40%;
     font-family: 'Montserrat';
 
-    >.input-name {
+    >.input-name-container {
         width: 100%;
-        border-radius: 10px;
-        border: 1px solid #5988FF;
-        padding: 15px 25px;
-        outline: #5988FF;
 
-        &::placeholder {
-            color: #000;
-            font-size: 16px;
+        >.label-and-inputName-wrapper {
+            position: relative;
+            width: 100%;
+
+            .name-label {
+                position: absolute;
+                top: 22%;
+                left: 16px;
+                background: #fff;
+                padding: 4px;
+                transition: all 0.3s cubic-bezier(.215, .61, .355, 1);
+            }
+
+            .input-name {
+                border-radius: 10px;
+                border: 2px solid #5988FF;
+                padding: 15px 25px;
+                outline: none;
+                width: 100%;
+            }
+
+        }
+
+        >.requiredBanner {
+            margin-top: 8px;
+            color: red;
         }
     }
 
-    >.input-email {
+    >.input-email-container {
         width: 100%;
-        border-radius: 10px;
-        border: 1px solid #5988FF;
-        padding: 15px 25px;
-        outline: #5988FF;
 
-        &::placeholder {
-            color: #000;
-            font-size: 16px;
+        >.label-and-inputEmail-wrapper {
+            position: relative;
+            width: 100%;
+
+            >.email-label {
+                position: absolute;
+                top: 22%;
+                left: 16px;
+                background: #fff;
+                padding: 4px;
+                transition: all 0.3s cubic-bezier(.215, .61, .355, 1);
+            }
+
+            >.input-email {
+                border-radius: 10px;
+                border: 2px solid #5988FF;
+                padding: 15px 25px;
+                outline: none;
+                width: 100%;
+            }
         }
+
+        >.requiredBanner {
+            margin-top: 8px;
+            color: red;
+        }
+
+
     }
 
-    >.textarea {
+    >.textarea-container {
         width: 100%;
-        border-radius: 10px;
-        border: 1px solid #5988FF;
-        padding: 15px 25px;
-        outline: #5988FF;
-        resize: none;
 
-        &::placeholder {
-            color: #000;
-            font-size: 16px;
+        >.label-and-textarea-wrapper {
+            position: relative;
+            width: 100%;
+
+            >.message-label {
+                position: absolute;
+                top: 8%;
+                left: 16px;
+                background: #fff;
+                padding: 4px;
+                transition: all 0.3s cubic-bezier(.215, .61, .355, 1);
+            }
+
+            >.textarea {
+                border-radius: 10px;
+                border: 2px solid #5988FF;
+                padding: 15px 25px;
+                outline: none;
+                width: 100%;
+            }
         }
+
+        >.isRequired {
+            margin-top: 8px;
+            color: red;
+        }
+
+
     }
 
     >button {
-        background: #fff;
-        border: 2px solid #5988FF;
         border-radius: 10px;
-        font-size: 24px;
-        outline: none;
-        padding: 15px 30px;
+        border: 2px solid #5988FF;
         color: #5988FF;
+        padding: 15px 30px;
+        font-size: 24px;
+        background: #fff;
 
         &:hover {
             cursor: pointer;
         }
     }
+
+
+
+
 }
 
 .checkbox-container {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    width: 100%;
 
-    >.input-checkbox {
-        height: 24px;
-        width: 24px;
-        border: 1px solid #5988FF;
-        background: #fff;
-        position: relative;
+    >.chekbox-and-policy-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        >.input-checkbox {
+            height: 24px;
+            width: 24px;
+            border: 1px solid #5988FF;
+            background: #fff;
+            position: relative;
+        }
+
+        >.privacy-policy-container {
+            >a {
+                color: #5988FF;
+                text-decoration: none;
+            }
+
+        }
     }
+
+    >.requiredBanner {
+        margin-top: 8px;
+        color: red;
+    }
+
 }
 
 .ellipseSmallContact {
@@ -202,4 +281,12 @@
     .ellipseSmallContact {
         top: 850px;
     }
+}
+
+.labelAnimation {
+    transform: translateY(-24px);
+}
+
+.labelTextareaAnimation {
+    transform: translateY(-29px);
 }

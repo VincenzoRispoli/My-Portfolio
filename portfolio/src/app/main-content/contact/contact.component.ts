@@ -17,10 +17,32 @@ export class ContactComponent {
   buttonIsDisabled: boolean = true;
   checked = false;
 
-  borderGray = '1px solid #bbb';
-  borderBlue = '1px solid #5988FF';
+  borderGray = '2px solid #bbb';
   colorGray = '#bbb';
-  colorBlue = '#5988FF'
+
+  animateName: boolean = false;
+  animateEmail: boolean = false;
+  animateTextarea: boolean = false
+
+  translateUp(label: string) {
+    if (label == 'name') {
+      this.animateName = true
+    } else if (label == 'email') {
+      this.animateEmail = true;
+    } else {
+      this.animateTextarea = true;
+    }
+  }
+
+  translateBack(label: string, value: string) {
+    if (label == 'name' && value.length == 0) {
+      this.animateName = false
+    } else if (label == 'email' && value.length == 0) {
+      this.animateEmail = false;
+    } else if (label == 'message' && value.length == 0) {
+      this.animateTextarea = false;
+    }
+  }
 
   http = inject(HttpClient);
   contactData = {

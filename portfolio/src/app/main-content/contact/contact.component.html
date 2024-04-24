@@ -11,30 +11,69 @@
             <p class="call-to-action">Need a Frontend developer? <b>Contact me!</b></p>
         </div>
         <form class="contact-form" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-            <input [(ngModel)]="contactData.name" name="name" class="input-name" type="text" placeholder="Your Name"
-                required>
-            <input [(ngModel)]="contactData.email" name="email" class="input-email" type="email"
-                placeholder="Your E-Mail" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
-            <textarea #message="ngModel" [(ngModel)]="contactData.message" type="text" class="textarea" name="message"
-                id="message" minlength="3" cols="30" rows="10" placeholder="Your message" required></textarea>
-            @if(!message.valid && message.touched){
-            <span>Please enter a message</span>
+            <div class="input-name-container">
+                <div class="label-and-inputName-wrapper">
+                    <label [ngClass]="{labelAnimation: animateName}" class="name-label" for="name">Your Name</label>
+                    <input (focus)="translateUp('name')" (blur)="translateBack('name', contactData.name)"
+                        [(ngModel)]="contactData.name" id="name" name="name" class="input-name" type="text"
+                        minlength="3" #name="ngModel" required>
+                </div>
+                <div class="requiredBanner">
+                    @if(!name.valid && name.touched){
+                    <span>Your name is required</span>
+                    }
+                </div>
+            </div>
+
+            <div class="input-email-container">
+                <div class="label-and-inputEmail-wrapper">
+                    <label [ngClass]="{labelAnimation: animateEmail}" class="email-label" for="email">Your Email</label>
+                    <input (focus)="translateUp('email')" (blur)="translateBack('email', contactData.email)"
+                        [(ngModel)]="contactData.email" id="email" name="email" class="input-email" type="email"
+                        #email="ngModel" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+                </div>
+                <div class="requiredBanner">
+                    @if(!email.valid && email.touched){
+                    <span>Your email is required</span>
+                    }
+                </div>
+            </div>
+
+            <div class="textarea-container">
+                <div class="label-and-textarea-wrapper">
+                    <label [ngClass]="{labelTextareaAnimation: animateTextarea}" class="message-label"
+                        for="message">Your
+                        message</label>
+                    <textarea (focus)="translateUp('message')" (blur)="translateBack('message',contactData.message)"
+                        #message="ngModel" [(ngModel)]="contactData.message" id="textarea" type="text" class="textarea"
+                        name="message" id="message" minlength="3" cols="30" rows="10" required></textarea>
+                </div>
+                <div class="isRequired">
+                    @if(!message.valid && message.touched){
+                    <span>Your message is empty</span>
+                    }
+                </div>
+            </div>
+            <div class="checkbox-container">
+                <div class="chekbox-and-policy-wrapper">
+                    <input name="checkbox" #checkbox="ngModel" [ngModel]="checked" (change)="updateButtonState($event)"
+                        class="input-checkbox" type="checkbox" required>
+                    <span class="privacy-policy-container">I have read the <a href="privacy-policy">privacy policy</a>
+                        and
+                        agree to the processing of my data as outlined
+                    </span>
+                </div>
+                <div class="requiredBanner">
+                    @if(!checkbox.valid && checkbox.touched){
+                    <span>Please accept the privacy policy</span>
+                    }
+                </div>
+            </div>
+            @if(name.valid && email.valid && message.valid && checkbox.valid ){
+            <button [disabled]="false">SayHello!</button>
+            } @else {
+            <button [ngStyle]="{'border': borderGray, 'color': colorGray}" [disabled]="true">SayHello!</button>
             }
-            <label class="checkbox-container">
-                <input name="checkbox" #checkbox="ngModel" [ngModel]="checked" (change)="updateButtonState($event)"
-                    class="input-checkbox" type="checkbox" required>
-                <span class="checkmark"></span>
-                I've
-                read the
-                <a style="color: #5988FF;" href="privacy-policy">privacy policy</a>
-                and agree to the processing of my data as outlined
-            </label>
-            @if(!checkbox.valid && contactForm.submitted){
-            <span [ngStyle]="{'text-align': 'start', 'width':'100%',}">Please check the</span>
-            }
-            <button
-                [ngStyle]="{'border': buttonIsDisabled ? borderGray : borderBlue, 'color': buttonIsDisabled ? colorGray : colorBlue}"
-                [disabled]="buttonIsDisabled">SayHello!</button>
         </form>
     </div>
 </div>
