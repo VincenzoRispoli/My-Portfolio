@@ -17,6 +17,11 @@
                     <input (focus)="translateUp('name')" (blur)="translateBack('name', contactData.name)"
                         [(ngModel)]="contactData.name" id="name" name="name" class="input-name" type="text"
                         minlength="3" #name="ngModel" required>
+                    @if(!name.valid && name.touched){
+                    <img class="frame" src="../../../assets/icons/frame(!).png" alt="">
+                    } @else if (name.valid) {
+                    <img class="frame" src="../../../assets/icons/frameV.png" alt="">
+                    }
                 </div>
                 <div class="requiredBanner">
                     @if(!name.valid && name.touched){
@@ -31,6 +36,11 @@
                     <input (focus)="translateUp('email')" (blur)="translateBack('email', contactData.email)"
                         [(ngModel)]="contactData.email" id="email" name="email" class="input-email" type="email"
                         #email="ngModel" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+                    @if(!email.valid && email.touched){
+                    <img class="frame" src="../../../assets/icons/frame(!).png" alt="">
+                    } @else if (email.valid) {
+                    <img class="frame" src="../../../assets/icons/frameV.png" alt="">
+                    }
                 </div>
                 <div class="requiredBanner">
                     @if(!email.valid && email.touched){
@@ -47,6 +57,11 @@
                     <textarea (focus)="translateUp('message')" (blur)="translateBack('message',contactData.message)"
                         #message="ngModel" [(ngModel)]="contactData.message" id="textarea" type="text" class="textarea"
                         name="message" id="message" minlength="3" cols="30" rows="10" required></textarea>
+                    @if(!message.valid && message.touched){
+                    <img class="frame" src="../../../assets/icons/frame(!).png" alt="">
+                    } @else if (message.valid) {
+                    <img class="frame" src="../../../assets/icons/frameV.png" alt="">
+                    }
                 </div>
                 <div class="isRequired">
                     @if(!message.valid && message.touched){
@@ -56,8 +71,13 @@
             </div>
             <div class="checkbox-container">
                 <div class="chekbox-and-policy-wrapper">
-                    <input name="checkbox" #checkbox="ngModel" [ngModel]="checked" (change)="updateButtonState($event)"
-                        class="input-checkbox" type="checkbox" required>
+                    <div class="label-and-checkbox-wrapper">
+                        <label class="custom-checkbox" for="checkbox"></label>
+                        <input id="checkbox" name="checkbox" #checkbox="ngModel" [ngModel]="checked"
+                            class="input-checkbox" type="checkbox" required>
+                        <img [ngStyle]="{'display': checkbox.valid ? '' : 'none'}" class="checkmark"
+                            src="../../../assets/icons/checkmark.svg" alt="">
+                    </div>
                     <span class="privacy-policy-container">I have read the <a href="privacy-policy">privacy policy</a>
                         and
                         agree to the processing of my data as outlined
@@ -70,9 +90,10 @@
                 </div>
             </div>
             @if(name.valid && email.valid && message.valid && checkbox.valid ){
-            <button [disabled]="false">SayHello!</button>
+            <button (mouseover)="onHover()" (mouseleave)="onLeave()" [ngClass]="{fillButton: isHover}"
+                [disabled]="false">SayHello ;)</button>
             } @else {
-            <button [ngStyle]="{'border': borderGray, 'color': colorGray}" [disabled]="true">SayHello!</button>
+            <button [ngStyle]="{'border': borderGray, 'color': colorGray}" [disabled]="true">Say hello ;)</button>
             }
         </form>
     </div>

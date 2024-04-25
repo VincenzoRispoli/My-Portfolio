@@ -1,7 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MenuMobileComponent } from './menu-mobile/menu-mobile.component';
+import { MenuMobileService } from '../../menu-mobile.service';
+
 
 
 @Component({
@@ -13,5 +15,7 @@ import { MenuMobileComponent } from './menu-mobile/menu-mobile.component';
 })
 export class AboveTheFoldComponent {
 
+  menuMobile = inject(MenuMobileService);
+  
 }
 

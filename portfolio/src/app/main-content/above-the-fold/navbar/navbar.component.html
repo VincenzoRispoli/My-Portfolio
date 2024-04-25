@@ -7,7 +7,7 @@
     </div>
     <div (click)="openMenu()" class="hamburger-menu">
         <span [ngClass]="{rotateToRight: menuService.translateY}"></span>
-        <span [ngStyle]="{'display': menuService.translateY ? 'none' : ''}"></span>
+        <span [ngStyle]="{'display': menuService.translateY ? 'none' : 'block'}"></span>
         <span [ngClass]="{rotateToLeft: menuService.translateY}"></span>
     </div>
 </nav>

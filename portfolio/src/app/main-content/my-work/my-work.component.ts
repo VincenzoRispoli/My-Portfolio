@@ -16,13 +16,15 @@ export class MyWorkComponent {
       title: 'Join',
       image: 'join.png',
       technologies: 'HTML | CSS | Javascript',
-      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. '
+      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
+      linkGithub: 'https://github.com/VincenzoRispoli/El-Pollo-Loco',
     },
     {
       title: 'El Pollo Loco',
       image: 'polloLoco.png',
       technologies: 'HTML | CSS | Javacript',
-      description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.'
+      description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
+      linkGithub: 'https://github.com/VincenzoRispoli/El-Pollo-Loco'
     },
   ]
 }

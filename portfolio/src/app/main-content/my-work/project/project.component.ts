@@ -15,7 +15,8 @@ export class ProjectComponent {
     image: 'join.png',
     title: 'Join',
     technologies: 'HTML | CSS | Javascript',
-    description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. '
+    description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
+    linkGithub: 'https://github.com/VincenzoRispoli/El-Pollo-Loco'
   }
 
   onHover() {

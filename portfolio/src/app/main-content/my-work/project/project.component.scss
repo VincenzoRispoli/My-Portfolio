@@ -9,6 +9,12 @@
         object-fit: cover;
         z-index: 1;
         box-shadow: 10px 5px 20px lightblue;
+        transition: all 0.25s cubic-bezier(.215, .61, .355, 1);
+
+        &:hover {
+            transform: scale(1.05) translateY(-10px);
+            cursor: pointer;
+        }
     }
 }
 

@@ -30,15 +30,20 @@
         gap: 56px;
 
         >a {
-            font-size: 56px;
+            font-size: 32px;
             text-decoration: none;
             color: #5988FF;
+            font-weight: 600;
+
+            &:focus {
+                font-weight: 800;
+            }
         }
     }
 }
 
 .traslationY {
-    transform: translateY(0)
+    transform: translateY(0);
 }
 
 @media (min-width: 768px) {
@@ -48,12 +53,16 @@
 }
 
 @media (max-width: 430px) {
-  .menu-mobile{
-    >.links-container{
-        >a{
-            font-size: 24px;
-            font-weight: 600;
+    .menu-mobile {
+        >.links-container {
+            >a {
+                font-size: 24px;
+                font-weight: 400;
+
+                &:focus {
+                    font-weight: 600;
+                }
+            }
         }
     }
-  }
 }

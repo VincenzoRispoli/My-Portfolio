@@ -14,8 +14,8 @@ import { FormsModule, NgForm } from '@angular/forms';
 export class ContactComponent {
 
   updateCheckbox: boolean = false;
-  buttonIsDisabled: boolean = true;
   checked = false;
+  isHover:boolean = false;
 
   borderGray = '2px solid #bbb';
   colorGray = '#bbb';
@@ -44,6 +44,14 @@ export class ContactComponent {
     }
   }
 
+  onHover(){
+    this.isHover = true;
+  }
+
+  onLeave(){
+    this.isHover = false;
+  }
+
   http = inject(HttpClient);
   contactData = {
     name: '',
@@ -51,16 +59,15 @@ export class ContactComponent {
     message: '',
   }
 
-  updateButtonState(checked: any) {
-    if (checked.currentTarget.checked) {
-      this.checked = true
-      this.buttonIsDisabled = false;
-    } else if (!checked.currentTarget.checked) {
-      this.checked = false;
-      this.buttonIsDisabled = true;
-    }
-
-  }
+  // updateButtonState(checked: any) {
+  //   if (checked.currentTarget.checked) {
+  //     this.checked = true
+  //     this.buttonIsDisabled = false;
+  //   } else if (!checked.currentTarget.checked) {
+  //     this.checked = false;
+  //     this.buttonIsDisabled = true;
+  //   }
+  // }
 
   mailTest = true;
 

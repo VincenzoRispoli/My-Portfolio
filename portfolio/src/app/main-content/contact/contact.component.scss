@@ -72,6 +72,14 @@
                 padding: 15px 25px;
                 outline: none;
                 width: 100%;
+                font-size: 16px;
+                font-family: 'Montserrat';
+            }
+
+            >.frame {
+                position: absolute;
+                top: 11px;
+                right: 16px;
             }
 
         }
@@ -104,6 +112,14 @@
                 padding: 15px 25px;
                 outline: none;
                 width: 100%;
+                font-size: 16px;
+                font-family: 'Montserrat';
+            }
+
+            >.frame {
+                position: absolute;
+                top: 11px;
+                right: 16px;
             }
         }
 
@@ -137,6 +153,14 @@
                 padding: 15px 25px;
                 outline: none;
                 width: 100%;
+                font-size: 16px;
+                font-family: 'Montserrat';
+            }
+
+            >.frame {
+                position: absolute;
+                top: 11px;
+                right: 16px;
             }
         }
 
@@ -155,15 +179,43 @@
         padding: 15px 30px;
         font-size: 24px;
         background: #fff;
+        position: relative;
+        cursor: pointer;
+    }
+}
 
-        &:hover {
-            cursor: pointer;
-        }
+@keyframes fillFormButton {
+    0% {
+        width: 0%;
     }
 
+    100% {
+        width: 100%;
+        background: rgb(89, 136, 255);
+        background: radial-gradient(circle, rgba(89, 136, 255, 1) 0%, rgba(89, 136, 255, 1) 54%, rgba(0, 67, 240, 1) 86%);
+    }
+}
 
-
-
+.fillButton::before {
+    content: 'Say Hello ;)';
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #fff;
+    font-size: 24px;
+    border-radius: 10px;
+    animation: fillFormButton 0.08s forwards;
+    transform: scale(1.05);
+    background: rgb(89, 136, 255);
+    background: radial-gradient(circle, rgba(89, 136, 255, 1) 0%, rgba(89, 136, 255, 1) 54%, rgba(0, 67, 240, 1) 86%);
 }
 
 .checkbox-container {
@@ -174,18 +226,65 @@
         align-items: center;
         gap: 8px;
 
-        >.input-checkbox {
-            height: 24px;
-            width: 24px;
-            border: 1px solid #5988FF;
-            background: #fff;
+        >.label-and-checkbox-wrapper {
             position: relative;
+            position: relative;
+            border-radius: 50px;
+            padding: 5px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            z-index: 1;
+
+            &:hover {
+                background: #a0bbff;
+
+            }
+
+            >.custom-checkbox {
+                display: inline-block;
+                height: 24px;
+                width: 24px;
+                min-height: 24px;
+                min-width: 24px;
+                border: 2px solid #5988FF;
+                z-index: 3;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            >.input-checkbox {
+                position: absolute;
+                left: -9999px;
+            }
+
+            >.checkmark {
+                position: absolute;
+                top: 7px;
+                right: 4px;
+                height: 21px;
+                width: 25px;
+                z-index: 1;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
         }
 
         >.privacy-policy-container {
             >a {
                 color: #5988FF;
                 text-decoration: none;
+
+                &:active {
+                    color: blue;
+                    font-weight: 800;
+                    text-decoration: underline;
+                }
             }
 
         }
@@ -200,7 +299,7 @@
 
 .ellipseSmallContact {
     position: absolute;
-    top: 675px;
+    top: 750px;
     right: 70px;
 }
 
