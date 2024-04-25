@@ -51,7 +51,6 @@
             margin-block-start: 0;
             margin-block-end: 0;
             color: #5988FF;
-            ;
         }
     }
 }
@@ -86,12 +85,14 @@
     gap: 25px;
     z-index: 1;
 
-    >.social {
-        cursor: pointer;
-        transition: all 0.3s cubic-bezier(.215, .61, .355, 1);
+    >a {
+        >.social {
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(.215, .61, .355, 1);
 
-        &:hover {
-            transform: translateX(-10px);
+            &:hover {
+                transform: translateX(-10px);
+            }
         }
     }
 }
@@ -115,7 +116,13 @@
     }
 
     .wrapper {
-        padding: 0 60px;
+        padding: 0 16px;
+
+        .titles {
+            >h2 {
+                font-size: 64px;
+            }
+        }
     }
 }
 
@@ -157,7 +164,6 @@
 
             >h2 {
                 color: #fff;
-                font-size: 64px;
             }
         }
     }
@@ -178,7 +184,7 @@
             position: static;
             left: 0px;
             height: auto;
-            width: 350px;
+            width: 320px;
             z-index: 2;
         }
     }

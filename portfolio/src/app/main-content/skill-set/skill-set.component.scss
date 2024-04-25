@@ -74,6 +74,10 @@
 @media (max-width: 1050px) {
     .skill-set-section {
         padding: 48px 32px;
+
+        >h2 {
+            font-size: 64px;
+        }
     }
 
     .skill-set-wrapper {
@@ -106,6 +110,10 @@
 @media (max-width: 430px) {
     .skill-set-section {
         padding: 32px 16px;
+
+        >h2 {
+            font-size: 48px;
+        }
     }
 
     .skill-set {

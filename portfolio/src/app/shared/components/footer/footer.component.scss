@@ -52,9 +52,17 @@
             width: 25%;
             gap: 42px;
 
-            >img {
-                cursor: pointer;
+            >a {
+                >img {
+                    cursor: pointer;
+                    transition: all 0.2s cubic-bezier(.215, .61, .355, 1);
+
+                    &:hover {
+                        transform: scale(1.2)
+                    }
+                }
             }
+
         }
     }
 }
@@ -62,11 +70,37 @@
 .imprint-wrapper {
     @include flexCenter();
 
-    a {
-        padding: 5px 10px;
-        color: #fff;
-        font-size: 24px;
-        text-decoration: none;
+    >.imprint-little-wrapper {
+        flex-direction: column;
+        @include flexCenter();
+        overflow-x: hidden;
+
+        a {
+            padding: 5px 10px;
+            color: #fff;
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        >.underline {
+            display: block;
+            background: #fff;
+            height: 3px;
+            border-radius: 10px;
+            width: 60%;
+            transition: all 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+            transform: translateX(-200%);
+        }
+
+        &:hover a {
+            font-weight: 700;
+        }
+
+        &:hover .underline {
+            transform: translateX(0%);
+        }
+
+
     }
 }
 
