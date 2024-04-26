@@ -1,3 +1,35 @@
+.back {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 32px;
+
+    &:hover img {
+        transform: translateX(-10px);
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    >a {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        text-decoration: none;
+        color: #5988FF;
+        font-size: 24px;
+        font-weight: 700;
+
+        >img {
+            height: 32px;
+            object-fit: contain;
+            transition: all 0.2s cubic-bezier(.215, .61, .355, 1);
+        }
+    }
+
+}
+
 .imprint {
     padding: 32px;
 
