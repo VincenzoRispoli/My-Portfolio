@@ -280,11 +280,12 @@
             >a {
                 color: #5988FF;
                 text-decoration: none;
+                width: 20%;
 
-                &:active {
+                &:hover {
                     color: blue;
-                    font-weight: 800;
                     text-decoration: underline;
+                    font-weight: 700;
                 }
             }
 
@@ -304,6 +305,34 @@
     right: 70px;
     z-index: -1;
 }
+
+.arrow-up-container {
+    position: absolute;
+    bottom: 32px;
+    left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    width: 48px;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 50px;
+    background: rgb(89, 136, 255);
+    background: radial-gradient(circle, rgba(89, 136, 255, 1) 0%, rgba(89, 136, 255, 1) 54%, rgba(0, 67, 240, 1) 86%);
+
+    &:hover {
+        background: #fff;
+        border: 2px solid #5988FF;
+
+        >.arrow-up path {
+            fill: transparent !important;
+            stroke: #5988FF !important;
+        }
+    }
+
+}
+
 
 @media screen and (min-width: 1200px) {
     .contact-section {
@@ -362,6 +391,12 @@
         top: 827px;
         z-index: -1;
     }
+
+    .arrow-up-container {
+        left: 40px;
+    }
+
+
 }
 
 @media (max-width: 430px) {
@@ -376,11 +411,26 @@
             >h3 {
                 font-size: 24px;
             }
+
         }
+
+        >.contact-form {
+            >button {
+                padding: 8px 15px;
+                font-size: 16px;
+            }
+        }
+
     }
 
     .ellipseSmallContact {
-        top: 850px;
+        top: 900px;
+    }
+
+    .arrow-up-container {
+        left: 24px;
+        width: 32px;
+        height: 32px;
     }
 }
 

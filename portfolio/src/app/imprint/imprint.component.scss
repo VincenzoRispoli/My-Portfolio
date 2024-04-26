@@ -1,40 +1,34 @@
-.back {
+.imprint {
+    position: relative;
+    height: 100vh;
+    width: 100%;
     display: flex;
     align-items: center;
-    gap: 16px;
-    padding: 32px;
 
-    &:hover img {
-        transform: translateX(-10px);
-    }
+    >.info {
+        padding: 32px;
+        font-family: 'Montserrat';
 
-    &:hover {
-        cursor: pointer;
-    }
-
-    >a {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-        text-decoration: none;
-        color: #5988FF;
-        font-size: 24px;
-        font-weight: 700;
-
-        >img {
-            height: 32px;
-            object-fit: contain;
-            transition: all 0.2s cubic-bezier(.215, .61, .355, 1);
+        >h1 {
+            color: #5988FF;
         }
-    }
 
+        >p {
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+    }
 }
 
-.imprint {
-    padding: 32px;
 
-    >h1,
-    h2 {
-        color: #5988FF;
+.email {
+    color: #5988FF;
+    text-decoration: none;
+    font-size: 16px;
+
+    &:hover {
+        color: blue;
+        text-decoration: underline;
     }
 }
