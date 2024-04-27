@@ -4,7 +4,7 @@
         <div class="skill-set">
             @for(skill of skillSet; track skill; let index = $index){
             <div (mouseover)="getTranslation(index)" (mouseleave)="getTranslationBack(index)" class=" skill">
-                <img [class.translateY]="translationY[index]" src="../../../assets/icons/{{skill.image}}" alt="">
+                <img [class.translateY]="translationY[index]" src="assets/icons/{{skill.image}}" alt="">
                 <span [ngStyle]="{'font-weight': translationY[index] ? 700 : 400 }">{{skill.tech}}</span>
             </div>
             }

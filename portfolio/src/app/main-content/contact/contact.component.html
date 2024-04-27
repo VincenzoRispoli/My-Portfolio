@@ -1,5 +1,5 @@
 <div class="contact-section">
-    <img class="ellipseSmallContact" src="../../../assets/img/ellipseSmallContact.png" alt="">
+    <img class="ellipseSmallContact" src="assets/img/ellipseSmallContact.png" alt="">
     <a href="#atf" class="arrow-up-container">
         <svg xmlns="http://www.w3.org/2000/svg" class="arrow-up" viewBox="0 0 512 512">
             <path fill="transparent" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="48"
@@ -24,9 +24,9 @@
                         [(ngModel)]="contactData.name" id="name" name="name" class="input-name" type="text"
                         minlength="3" #name="ngModel" required>
                     @if(!name.valid && name.touched){
-                    <img class="frame" src="../../../assets/icons/frame(!).png" alt="">
+                    <img class="frame" src="assets/icons/frame(!).png" alt="">
                     } @else if (name.valid) {
-                    <img class="frame" src="../../../assets/icons/frameV.png" alt="">
+                    <img class="frame" src="assets/icons/frameV.png" alt="">
                     }
                 </div>
                 <div class="requiredBanner">
@@ -43,9 +43,9 @@
                         [(ngModel)]="contactData.email" id="email" name="email" class="input-email" type="email"
                         #email="ngModel" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
                     @if(!email.valid && email.touched){
-                    <img class="frame" src="../../../assets/icons/frame(!).png" alt="">
+                    <img class="frame" src="assets/icons/frame(!).png" alt="">
                     } @else if (email.valid) {
-                    <img class="frame" src="../../../assets/icons/frameV.png" alt="">
+                    <img class="frame" src="assets/icons/frameV.png" alt="">
                     }
                 </div>
                 <div class="requiredBanner">
@@ -64,9 +64,9 @@
                         #message="ngModel" [(ngModel)]="contactData.message" id="textarea" type="text" class="textarea"
                         name="message" id="message" minlength="3" cols="30" rows="10" required></textarea>
                     @if(!message.valid && message.touched){
-                    <img class="frame" src="../../../assets/icons/frame(!).png" alt="">
+                    <img class="frame" src="assets/icons/frame(!).png" alt="">
                     } @else if (message.valid) {
-                    <img class="frame" src="../../../assets/icons/frameV.png" alt="">
+                    <img class="frame" src="assets/icons/frameV.png" alt="">
                     }
                 </div>
                 <div class="isRequired">
@@ -82,7 +82,7 @@
                         <input id="checkbox" name="checkbox" #checkbox="ngModel" [ngModel]="checked"
                             class="input-checkbox" type="checkbox" required>
                         <img [ngStyle]="{'display': checkbox.valid ? '' : 'none'}" class="checkmark"
-                            src="../../../assets/icons/checkmark.svg" alt="">
+                            src="assets/icons/checkmark.svg" alt="">
                     </div>
                     <span class="privacy-policy-container">I have read the <a href="privacy-policy">privacy policy</a>
                         and
