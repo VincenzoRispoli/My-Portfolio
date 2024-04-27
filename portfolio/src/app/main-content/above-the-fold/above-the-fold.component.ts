@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { MenuMobileComponent } from './menu-mobile/menu-mobile.component';
 import { MenuMobileService } from '../../menu-mobile.service';
 
@@ -12,9 +12,21 @@ import { MenuMobileService } from '../../menu-mobile.service';
   templateUrl: './above-the-fold.component.html',
   styleUrl: './above-the-fold.component.scss'
 })
-export class AboveTheFoldComponent {
+export class AboveTheFoldComponent implements OnInit {
 
   menuMobile = inject(MenuMobileService);
+
+  translateGreet: boolean = false;
+  translateFronEnd = false
+
+  ngOnInit() {
+    setTimeout(() => {
+      this.translateGreet = true
+    }, 400);
+    setTimeout(() => {
+      this.translateFronEnd = true
+    }, 800);
+  }
 
 }
 

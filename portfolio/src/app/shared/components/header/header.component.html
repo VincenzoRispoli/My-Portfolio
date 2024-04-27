@@ -1,11 +1,11 @@
-<header (scroll)="onWindowScroll()" [ngClass]="{shadedHeader: pageScrolled, reducePadding: pageScrolled}">
-    <nav>
-        <a href="#atf"><img [ngStyle]="{'height': pageScrolled ? '48px' : '64px'}"
+<header (scroll)="onWindowScroll()" [ngStyle]="{'background': pageScrolled ? shadedHeader : 'transparent'}">
+    <nav [ngStyle]="{'padding': pageScrolled ? reducePadding : ''}">
+        <a (click)="onClickLogo()" href="#atf"><img [ngStyle]="{'height': pageScrolled ? '48px' : '64px'}"
                 src="../../../../assets/img/logo2.png" alt="LOGO"></a>
         <div class="menu-desktop">
-            <a [ngStyle]="{'font-weight': pageScrolled ? 700 : ''}" href="#letsWork">About me</a>
-            <a [ngStyle]="{'font-weight': pageScrolled ? 700 : ''}" href="#skill-set">Skill set</a>
-            <a [ngStyle]="{'font-weight': pageScrolled ? 700 : ''}" href="#my-work">My Work</a>
+            <a href="#letsWork">About me</a>
+            <a href="#skill-set">Skill set</a>
+            <a href="#my-work">My Work</a>
         </div>
         <div (click)="openMenu()" class="hamburger-menu">
             <span [ngClass]="{rotateToRight: menuService.translateY}"></span>
@@ -14,3 +14,5 @@
         </div>
     </nav>
 </header>
+
+<!-- [ngClass]="{shadedHeader: pageScrolled} -->

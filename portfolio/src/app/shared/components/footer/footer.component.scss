@@ -26,12 +26,14 @@
         width: 100%;
 
         >.logo-container {
-            @include flexCenter();
+            display: flex;
+            align-items: center;
             width: 25%;
 
             >.logo {
                 width: 150px;
                 object-fit: cover;
+                cursor: pointer
             }
         }
 
@@ -107,7 +109,7 @@
 @media (max-width: 1050px) {
     .footer {
         >.logoCopySocial-container {
-            .logo-container {
+            >.logo-container {
                 >.logo {
                     width: 120px;
                 }
@@ -132,6 +134,7 @@
 
             >.logo-container {
                 width: 100%;
+                justify-content: center;
             }
 
             >h2 {

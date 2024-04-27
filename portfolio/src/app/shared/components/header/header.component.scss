@@ -16,18 +16,18 @@ header {
     display: flex;
     justify-content: center;
     width: 100%;
-    padding: 56px 84px;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 5;
-    transition: all 0.2s cubic-bezier(.215, .61, .355, 1);
+    transition: all 0.3s cubic-bezier(.215, .61, .355, 1);
 
     >nav {
         width: 100%;
+        padding: 32px 56px;
         max-width: 1440px;
-        padding: 0 24px;
+        transition: all 0.3s cubic-bezier(.215, .61, .355, 1);
         @include flexCenter();
 
         >img {
@@ -41,7 +41,6 @@ header {
             justify-content: space-between;
             gap: 23px;
             width: 50%;
-            ;
 
             >a {
                 text-decoration: none;
@@ -62,15 +61,6 @@ header {
     }
 }
 
-.shadedHeader {
-    background: rgb(255, 255, 255);
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.68968837535014) 26%, rgba(218, 229, 255, 0.9922093837535014) 76%, rgba(228, 236, 255, 1) 97%);
-}
-
-.reducePadding {
-    padding: 28px 84px;
-}
-
 
 @media (min-width: 768px) {
     .hamburger-menu {
@@ -80,10 +70,10 @@ header {
 
 @media (max-width: 1050px) {
     header {
-        padding: 32px 24px;
+        padding: 0;
 
         >nav {
-            padding: 0;
+            padding: 24px;
 
             >.menu-desktop {
                 width: 55%;

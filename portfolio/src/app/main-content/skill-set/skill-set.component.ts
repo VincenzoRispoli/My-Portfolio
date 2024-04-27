@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './skill-set.component.html',
   styleUrl: './skill-set.component.scss'
 })
-export class SkillSetComponent {
+export class SkillSetComponent implements OnInit {
   translationY: boolean[] = [];
   translationY2: boolean[] = [];
 
@@ -16,7 +16,6 @@ export class SkillSetComponent {
     this.skillSet.forEach(() => {
       this.translationY.push(false)
     })
-    console.log(this.translationY);
   }
 
   skillSet = [

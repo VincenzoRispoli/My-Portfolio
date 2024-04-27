@@ -1,11 +1,13 @@
 <div class="hero-section">
     <app-menu-mobile></app-menu-mobile>
-    <img class=" ellipseHero" src="../../../assets/img/ellipseHero.svg" alt="">
-    <img class="me" src="../../../assets/img/me.png" alt="">
+    <img class=" ellipseHero" src="assets/img/ellipseHero.svg" alt="">
+    <img class="me" src="assets/img/me.png" alt="">
     <div class="wrapper">
         <div class="titles">
-            <h1>Hello, I'm Vincenzo</h1>
-            <h2>FRONTEND <br> DEVELOPER</h2>
+            <h1 [ngStyle]="{'transform': translateGreet ? 'translateX(0%)': 'translateX(150%)'}">Hello, I'm Vincenzo
+            </h1>
+            <h2 [ngStyle]="{'transform': translateFronEnd ? 'translateX(0%)': 'translateX(150%)'}">FRONTEND <br> DEVELOPER
+            </h2>
         </div>
         <div class="vector-bar-and-socialNetwork-container">
             <span></span>
@@ -14,11 +16,11 @@
                 <span class="vector-bar"></span>
             </div>
             <div class="social-network-container">
-                <a href="https://github.com/VincenzoRispoli"> <img class="social"
-                        src="../../../assets/img/githubHero.png" alt=""></a>
-                <a href=""> <img class="social" src="../../../assets/img/linkedinHero.png" alt=""></a>
+                <a href="https://github.com/VincenzoRispoli" target="_blank"> <img class="social"
+                        src="assets/img/githubHero.png" alt=""></a>
+                <a href="" target="_blank"> <img class="social" src="assets/img/linkedinHero.png" alt=""></a>
                 <a href="mailto:vincenzorispoli.vr@gmail.com"><img class="social"
-                        src="../../../assets/img/emailHero.png" alt=""></a>
+                        src="assets/img/emailHero.png" alt=""></a>
             </div>
         </div>
     </div>

@@ -59,20 +59,10 @@ export class ContactComponent {
     message: '',
   }
 
-  // updateButtonState(checked: any) {
-  //   if (checked.currentTarget.checked) {
-  //     this.checked = true
-  //     this.buttonIsDisabled = false;
-  //   } else if (!checked.currentTarget.checked) {
-  //     this.checked = false;
-  //     this.buttonIsDisabled = true;
-  //   }
-  // }
-
   mailTest = true;
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://vincenzo-rispoli.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -101,3 +91,5 @@ export class ContactComponent {
     }
   }
 }
+
+// sendMail.php
