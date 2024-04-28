@@ -24,7 +24,6 @@ export class HeaderComponent {
     }
   }
   shadedHeader: string = 'rgba(218, 229, 255, 0.5) linear-gradient(0deg, rgba(218, 229, 255, 0.05103291316526615) 0%, rgba(228, 236, 255, 0.6868872549019608) 12%, rgba(255, 255, 255, 0.801733193277311) 38%, rgba(236, 242, 255, 0.874562324929972) 100%)'
-  reducePadding: string = '16px 24px';
   pageScrolled: boolean = false;
   menuService = inject(MenuMobileService);
 

@@ -21,18 +21,19 @@ header {
     left: 0;
     right: 0;
     z-index: 5;
-    transition: all 0.3s cubic-bezier(.215, .61, .355, 1);
 
     >nav {
         width: 100%;
-        padding: 32px 56px;
         max-width: 1440px;
         transition: all 0.3s cubic-bezier(.215, .61, .355, 1);
         @include flexCenter();
 
-        >img {
-            height: 64px;
-            object-fit: cover;
+        >a {
+            transition: all 0.3s cubic-bezier(.215, .61, .355, 1);
+
+            >img {
+                object-fit: cover;
+            }
         }
 
         >.menu-desktop {
@@ -70,11 +71,7 @@ header {
 
 @media (max-width: 1050px) {
     header {
-        padding: 0;
-
         >nav {
-            padding: 24px;
-
             >.menu-desktop {
                 width: 55%;
             }
@@ -83,10 +80,19 @@ header {
 }
 
 @media (max-width: 768px) {
+    header {
+        >nav {
+            >.menu-desktop {
+                display: none;
+            }
+        }
+    }
+
     .hamburger-menu {
         display: flex;
         flex-direction: column;
         gap: 8px;
+        padding: 32px;
 
         :nth-child(1) {
             @include menuBarsStyle();
@@ -98,17 +104,6 @@ header {
 
         :nth-child(3) {
             @include menuBarsStyle();
-        }
-    }
-}
-
-
-@media (max-width: 768px) {
-    header {
-        >nav {
-            >.menu-desktop {
-                display: none;
-            }
         }
     }
 }
