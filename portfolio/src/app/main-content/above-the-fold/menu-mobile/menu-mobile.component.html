@@ -1,8 +1,8 @@
 <nav [class.traslationY]="menuMobile.translateY" class="menu-mobile">
     <div class="links-container">
-        <a (click)="menuMobile.onLinkClicked()" href="#letsWork">About Me</a>
-        <a (click)="menuMobile.onLinkClicked()" href="#skill-set">Skill Set</a>
-        <a (click)="menuMobile.onLinkClicked()" href="#my-work">My Work</a>
-        <a (click)="menuMobile.onLinkClicked()" href="#contact">Contact</a>
+        <a (click)="menuMobile.onLinkClicked()" href="#letsWork">{{"about-me" | translate}}</a>
+        <a (click)="menuMobile.onLinkClicked()" href="#skill-set">{{"skill-set" | translate}}</a>
+        <a (click)="menuMobile.onLinkClicked()" href="#my-work">{{"my-work" | translate}}</a>
+        <a (click)="menuMobile.onLinkClicked()" href="#contact">{{"contact" | translate}}</a>
     </div>
 </nav>

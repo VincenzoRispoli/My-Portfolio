@@ -1,20 +1,23 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
 import { MenuMobileComponent } from './menu-mobile/menu-mobile.component';
-import { MenuMobileService } from '../../menu-mobile.service';
+import { MenuMobileService } from '../../shared/components/services/menu-mobile.service';
+import { TranslateModule } from '@ngx-translate/core';
+import { TranslationService } from '../../shared/components/services/translation.service';
 
 
 
 @Component({
   selector: 'app-above-the-fold',
   standalone: true,
-  imports: [CommonModule, MenuMobileComponent],
+  imports: [CommonModule, MenuMobileComponent, TranslateModule],
   templateUrl: './above-the-fold.component.html',
   styleUrl: './above-the-fold.component.scss'
 })
 export class AboveTheFoldComponent implements OnInit {
 
   menuMobile = inject(MenuMobileService);
+  translate = inject(TranslationService);
 
   translateGreet: boolean = false;
   translateFronEnd = false

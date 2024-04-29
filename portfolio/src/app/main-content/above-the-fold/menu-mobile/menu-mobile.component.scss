@@ -12,7 +12,7 @@
     background: rgb(255, 255, 255);
     background: linear-gradient(159deg, rgba(255, 255, 255, 0.85) 0%, rgba(234, 240, 255, 0.85) 75%);
     transition: all 0.4s cubic-bezier(.215, .61, .355, 1);
-    transform: translateY(-100%);
+    transform: translateX(100%);
 
 
     >.logo-container {
@@ -43,10 +43,10 @@
 }
 
 .traslationY {
-    transform: translateY(0);
+    transform: translateX(0);
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1051px) {
     .menu-mobile {
         display: none;
     }

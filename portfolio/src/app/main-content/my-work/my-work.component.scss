@@ -6,6 +6,8 @@
 .my-work-section {
     position: relative;
     padding: 120px 56px 56px 56px;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(241, 245, 255, 1) 0%, rgba(241, 245, 255, 1) 0%, rgba(237, 242, 255, 1) 23%, rgba(234, 240, 255, 0.6840861344537815) 100%);
 }
 
 .my-work-container {
@@ -38,8 +40,6 @@
     position: absolute;
     top: 96px;
     right: 150px;
-    z-index: -1;
-    opacity: 0.8;
 }
 
 .ellipseHalfMyWork {
@@ -111,12 +111,12 @@
 
     .ellipseMyWorkMedium {
         height: 85px;
-        top: 237px;
+        top: 73px;
     }
 
     .ellipseMyWorkSmall {
         height: 50px;
-        left: 300px;
+        left: 250px;
     }
 
     .ellipseSmallestMyWork {
@@ -127,14 +127,14 @@
 
 @media (max-width: 430px) {
     .ellipseMyWorkMedium {
-        height: 76px;
-        top: 175px;
-        z-index: -1;
+        height: 58px;
+        top: 31px;
+
     }
 
     .ellipseMyWorkSmall {
-        height: 32px;
-        left: 270px;
+        height: 40px;
+        left: 100px;
     }
 
     .my-work-container {

@@ -4,6 +4,12 @@
         <h3>{{project.title}}</h3>
         <span>{{project.technologies}}</span>
         <p>{{project.description}}</p>
-        <a [class.fill-button]="isHover" (mouseover)="onHover()" (mouseleave)="onLeave()" target="_blank" href="{{project.linkGithub}}">Github</a>
+        <div [ngClass]="{flexBtnContainer: project.title == 'El Pollo Loco'}" class="project-btn-container">
+            <a class="gitHub-btn" [ngClass]="{'fill-button': gitBtnisHover}" (mouseover)="onHover('gitHub')"
+                (mouseleave)="onLeave('gitHub')" target="_blank" href="{{project.linkGithub}}">Github</a>
+            <a [ngClass]="{'fill-LiveTest-button': liveTestBtnisHover}" (mouseover)="onHover('liveTest')"
+                (mouseleave)="onLeave('liveTest')" class="liveTest-btn" href="{{project.linkLiveTest}}">Live Test</a>
+        </div>
+
     </div>
 </div>

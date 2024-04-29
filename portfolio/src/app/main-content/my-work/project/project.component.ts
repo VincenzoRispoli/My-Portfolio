@@ -9,21 +9,33 @@ import { Component, Input } from '@angular/core';
   styleUrl: './project.component.scss'
 })
 export class ProjectComponent {
-  isHover: boolean = false;
+  gitBtnisHover: boolean = false;
+  liveTestBtnisHover: boolean = false
 
   @Input() project = {
     image: 'join.png',
     title: 'Join',
     technologies: 'HTML | CSS | Javascript',
     description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
-    linkGithub: 'https://github.com/VincenzoRispoli/El-Pollo-Loco'
+    linkGithub: 'https://github.com/VincenzoRispoli/El-Pollo-Loco',
+    linkLiveTest: 'https://elpolloloco.vincenzo-rispoli.de/',
   }
 
-  onHover() {
-    this.isHover = true;
+  onHover(link: string) {
+    if (link == 'gitHub') {
+      this.gitBtnisHover = true;
+    } else {
+      this.liveTestBtnisHover = true;
+
+    }
   }
 
-  onLeave() {
-    this.isHover = false;
+  onLeave(link: string) {
+    if (link == 'gitHub') {
+      this.gitBtnisHover = false;
+    } else {
+      this.liveTestBtnisHover = false
+
+    }
   }
 }

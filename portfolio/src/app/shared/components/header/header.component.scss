@@ -25,8 +25,10 @@ header {
     >nav {
         width: 100%;
         max-width: 1440px;
+        padding: 15px;
         transition: all 0.3s cubic-bezier(.215, .61, .355, 1);
         @include flexCenter();
+
 
         >a {
             transition: all 0.3s cubic-bezier(.215, .61, .355, 1);
@@ -36,34 +38,86 @@ header {
             }
         }
 
-        >.menu-desktop {
+        >.menu-wrapper {
             display: flex;
-            align-items: center;
             justify-content: space-between;
-            gap: 23px;
-            width: 50%;
+            width: 55%;
+            gap: 16px;
 
-            >a {
-                text-decoration: none;
-                color: #5988FF;
-                font-size: 23px;
-                font-weight: 400;
-                font-family: 'Montserrat';
-                transition: all 0.15s cubic-bezier(.215, .61, .355, 1);
-                width: 30%;
-                text-align: center;
+            >.menu-desktop {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex: 1;
+                gap: 23px;
+
+                >a {
+                    text-decoration: none;
+                    color: #5988FF;
+                    font-size: 23px;
+                    font-weight: 400;
+                    font-family: 'Montserrat';
+                    transition: all 0.15s cubic-bezier(.215, .61, .355, 1);
+                    width: 25%;
+                    text-align: center;
+
+                    &:hover {
+                        font-weight: 800
+                    }
+                }
+            }
+
+            >.languages-container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 10%;
+                transition: all 0.125s cubic-bezier(.215, .61, .355, 1);
 
                 &:hover {
-                    font-weight: 800
+                    cursor: pointer;
+                    transform: scale(1.1);
+                }
+
+
+                >.flag {
+                    height: auto;
+                    height: 48px;
+                    width: 48px;
+                    object-fit: cover;
+                    border-radius: 100%;
+                    border: 2px solid #5988FF;
                 }
             }
 
         }
     }
+
+}
+
+.logoPaddingNormal {
+    padding: 32px
+}
+
+.logoPaddingScrolled {
+    padding: 16px;
+}
+
+.heightLogoScrolled {
+    height: 48px;
+    object-fit: cover;
+}
+
+.heightLogoNormal {
+    height: 64px;
+    object-fit: cover;
 }
 
 
-@media (min-width: 768px) {
+
+
+
+@media (min-width: 1051px) {
     .hamburger-menu {
         display: none;
     }
@@ -72,8 +126,32 @@ header {
 @media (max-width: 1050px) {
     header {
         >nav {
-            >.menu-desktop {
-                width: 55%;
+            >.menu-wrapper {
+                flex-direction: row-reverse;
+                justify-content: flex-start;
+
+                >.menu-desktop {
+                    display: none;
+                }
+
+                >.hamburger-menu {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+                    padding: 32px;
+
+                    :nth-child(1) {
+                        @include menuBarsStyle();
+                    }
+
+                    :nth-child(2) {
+                        @include menuBarsStyle();
+                    }
+
+                    :nth-child(3) {
+                        @include menuBarsStyle();
+                    }
+                }
             }
         }
     }
@@ -88,23 +166,22 @@ header {
         }
     }
 
-    .hamburger-menu {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        padding: 32px;
+    .logoPaddingNormal {
+        padding: 16px
+    }
 
-        :nth-child(1) {
-            @include menuBarsStyle();
-        }
+    .logoPaddingScrolled {
+        padding: 8px;
+    }
 
-        :nth-child(2) {
-            @include menuBarsStyle();
-        }
+    .heightLogoScrolled {
+        height: 32px;
+        object-fit: cover;
+    }
 
-        :nth-child(3) {
-            @include menuBarsStyle();
-        }
+    .heightLogoNormal {
+        height: 48px;
+        object-fit: cover;
     }
 }
 
