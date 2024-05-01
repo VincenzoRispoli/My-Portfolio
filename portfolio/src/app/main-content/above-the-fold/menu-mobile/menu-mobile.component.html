@@ -1,8 +1,19 @@
-<nav [class.traslationY]="menuMobile.translateY" class="menu-mobile">
+<nav [class.traslationY]="menuService.translateY" class="menu-mobile">
     <div class="links-container">
-        <a (click)="menuMobile.onLinkClicked()" href="#letsWork">{{"about-me" | translate}}</a>
-        <a (click)="menuMobile.onLinkClicked()" href="#skill-set">{{"skill-set" | translate}}</a>
-        <a (click)="menuMobile.onLinkClicked()" href="#my-work">{{"my-work" | translate}}</a>
-        <a (click)="menuMobile.onLinkClicked()" href="#contact">{{"contact" | translate}}</a>
+        <a (click)="menuService.onLinkClicked()" href="#letsWork">{{"about-me" | translate}}</a>
+        <a (click)="menuService.onLinkClicked()" href="#skill-set">{{"skill-set" | translate}}</a>
+        <a (click)="menuService.onLinkClicked()" href="#my-work">{{"my-work" | translate}}</a>
+        <a (click)="menuService.onLinkClicked()" href="#contact">{{"contact" | translate}}</a>
+        <div class="languages-container" (click)="menuService.onLanguageChange()">
+            <span>{{"switchTo" | translate}}</span>
+            <div class="flags-container">
+                <img (click)="translate.switchToOtherLang('de')" class="flag"
+                    [ngStyle]="{'display': menuService.isOnEnglish ? '': 'none'}" src="assets/img/germanFlag.png"
+                    alt="">
+                <img (click)="translate.switchToOtherLang('en')" class="flag"
+                    [ngStyle]="{'display': menuService.isOnEnglish ? 'none' : ''}" src="assets/img/englishFlag.png"
+                    alt="">
+            </div>
+        </div>
     </div>
 </nav>

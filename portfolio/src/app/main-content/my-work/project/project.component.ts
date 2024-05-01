@@ -1,22 +1,28 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, Input, inject, OnInit } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
+import { TranslationService } from '../../../shared/components/services/translation.service';
 
 @Component({
   selector: 'app-project',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './project.component.html',
   styleUrl: './project.component.scss'
 })
 export class ProjectComponent {
+  translate = inject(TranslationService);
+
   gitBtnisHover: boolean = false;
   liveTestBtnisHover: boolean = false
+
+
 
   @Input() project = {
     image: 'join.png',
     title: 'Join',
     technologies: 'HTML | CSS | Javascript',
-    description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
+    description: "join-description",
     linkGithub: 'https://github.com/VincenzoRispoli/El-Pollo-Loco',
     linkLiveTest: 'https://elpolloloco.vincenzo-rispoli.de/',
   }

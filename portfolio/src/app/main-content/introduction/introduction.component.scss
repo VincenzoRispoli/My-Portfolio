@@ -113,6 +113,12 @@
     }
 }
 
+.flexColumnGerman {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
 @media screen and (min-width: 1200px) {
     .letsWorkTogether-container {
         >h2 {

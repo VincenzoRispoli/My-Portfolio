@@ -10,7 +10,7 @@ export class TranslationService {
     this.translate.setDefaultLang('en')
   }
 
-  switchToOtherLang(lang: string): void {
+  switchToOtherLang(lang: string) {
     this.translate.use(lang);
   }
 

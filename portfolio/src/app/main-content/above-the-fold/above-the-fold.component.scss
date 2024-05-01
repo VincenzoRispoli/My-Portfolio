@@ -9,9 +9,10 @@
     background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(241, 245, 255, 1) 0%, rgba(241, 245, 255, 1) 0%, rgba(237, 242, 255, 1) 23%, rgba(234, 240, 255, 0.6840861344537815) 100%);
 
     >.ellipseHero {
+        position: absolute;
+        left: -40px;
         height: 600px;
         object-fit: cover;
-        position: absolute;
     }
 }
 
@@ -88,6 +89,7 @@
         width: 20%;
 
         >a {
+            font-size: 24px;
             color: #5988FF;
             text-decoration: none;
 
@@ -123,12 +125,28 @@
     }
 }
 
+@media screen and (min-width:1050px) {
+    .wrapper {
+        >.titlesAndSocialWrapper {
+            >.titles {
+                >h1 {
+                    font-size: 38px;
+                }
+
+                >h2 {
+                    font-size: 96px;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (min-width: 1200px) {
     .wrapper {
         >.titlesAndSocialWrapper {
             >.titles {
                 >h1 {
-                    font-size: 64px;
+                    font-size: 48px;
                 }
 
                 >h2 {
@@ -143,17 +161,21 @@
 @media (max-width: 1050px) {
     .hero-section {
         >.ellipseHero {
-            height: 450px;
+            height: 500px;
             left: -32px;
         }
     }
 
     .wrapper {
-        padding: 0px 56px;
+        >.titlesAndSocialWrapper {
+            >.titles {
+                >h1 {
+                    font-size: 32px;
+                }
 
-        .titles {
-            >h2 {
-                font-size: 64px;
+                >h2 {
+                    font-size: 72px;
+                }
             }
         }
     }
@@ -190,16 +212,17 @@
         }
 
         >.titlesAndSocialWrapper {
-            width: 100%;
+            width: 75%;
             align-items: flex-start;
             margin-top: 200px;
 
             >.titles {
                 margin-bottom: 0;
+                min-width: 350px;
 
                 >h1 {
                     color: #fff;
-                    font-size: 32px;
+                    font-size: 28px;
                 }
 
                 >h2 {

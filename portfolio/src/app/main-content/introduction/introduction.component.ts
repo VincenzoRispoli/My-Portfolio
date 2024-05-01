@@ -1,23 +1,29 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { MenuMobileService } from '../../shared/components/services/menu-mobile.service';
+import { TranslateModule } from '@ngx-translate/core';
+import { TranslationService } from '../../shared/components/services/translation.service';
 
 
 @Component({
   selector: 'app-introduction',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './introduction.component.html',
   styleUrl: './introduction.component.scss'
 })
 export class IntroductionComponent {
 
-  isHover:boolean = false;
+  menuService = inject(MenuMobileService)
+  translate = inject(TranslationService);
 
-  onHover(){
+  isHover: boolean = false;
+
+  onHover() {
     this.isHover = true
   }
 
-  onLeave(){
+  onLeave() {
     this.isHover = false
   }
 

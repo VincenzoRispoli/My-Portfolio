@@ -3,7 +3,7 @@
     <div [ngClass]="{flexEnd: project.title == 'El Pollo Loco'}" class="project-infos">
         <h3>{{project.title}}</h3>
         <span>{{project.technologies}}</span>
-        <p>{{project.description}}</p>
+        <p>{{project.description | translate}}</p>
         <div [ngClass]="{flexBtnContainer: project.title == 'El Pollo Loco'}" class="project-btn-container">
             <a class="gitHub-btn" [ngClass]="{'fill-button': gitBtnisHover}" (mouseover)="onHover('gitHub')"
                 (mouseleave)="onLeave('gitHub')" target="_blank" href="{{project.linkGithub}}">Github</a>

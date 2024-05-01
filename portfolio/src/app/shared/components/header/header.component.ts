@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MenuMobileService } from '../services/menu-mobile.service';
+import { TranslateModule } from '@ngx-translate/core';
 import { TranslationService } from '../services/translation.service';
 import { HostListener } from '@angular/core';
 
@@ -8,7 +9,7 @@ import { HostListener } from '@angular/core';
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
@@ -28,7 +29,6 @@ export class HeaderComponent {
   }
   shadedHeader: string = 'rgba(218, 229, 255, 0.5) linear-gradient(0deg, rgba(218, 229, 255, 0.05103291316526615) 0%, rgba(228, 236, 255, 0.6868872549019608) 12%, rgba(255, 255, 255, 0.801733193277311) 38%, rgba(236, 242, 255, 0.874562324929972) 100%)'
   pageScrolled: boolean = false;
-  isOnEnglish: boolean = true;
 
   openMenu() {
     this.menuService.openMenuInNavbar();
@@ -36,9 +36,5 @@ export class HeaderComponent {
 
   onClickLogo() {
     this.menuService.onLinkClicked();
-  }
-
-  onLanguageChange() {
-    this.isOnEnglish = !this.isOnEnglish;
   }
 }

@@ -1,22 +1,30 @@
-import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { CommonModule, HashLocationStrategy } from '@angular/common';
+import { Component, inject } from '@angular/core';
 import { ProjectComponent } from './project/project.component';
+import { TranslateModule } from '@ngx-translate/core';
+import { TranslationService } from '../../shared/components/services/translation.service';
 
 
 @Component({
   selector: 'app-my-work',
   standalone: true,
-  imports: [CommonModule, ProjectComponent],
+  imports: [CommonModule, ProjectComponent, TranslateModule],
   templateUrl: './my-work.component.html',
   styleUrl: './my-work.component.scss'
 })
 export class MyWorkComponent {
+  translate = inject(TranslationService);
+  
+  constructor() {
+
+  }
+
   projectsList = [
     {
       title: 'Join',
       image: 'join.png',
       technologies: 'HTML | CSS | Javascript',
-      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
+      description: "join-decription",
       linkGithub: 'https://github.com/VincenzoRispoli/El-Pollo-Loco',
       linkLiveTest: 'https://join.vincenzo-rispoli.de/',
     },
@@ -24,9 +32,16 @@ export class MyWorkComponent {
       title: 'El Pollo Loco',
       image: 'polloLoco.png',
       technologies: 'HTML | CSS | Javacript',
-      description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
+      description: "pollo-loco-descrip",
       linkGithub: 'https://github.com/VincenzoRispoli/El-Pollo-Loco',
       linkLiveTest: 'https://elpolloloco.vincenzo-rispoli.de/',
     },
   ]
 }
+
+
+
+
+
+
+

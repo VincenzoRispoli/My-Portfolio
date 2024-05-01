@@ -3,25 +3,23 @@
         <a [ngClass]="{logoPaddingScrolled: pageScrolled, logoPaddingNormal: !pageScrolled}" (click)="onClickLogo()"
             href="#atf"><img [ngClass]="{heightLogoScrolled: pageScrolled, heightLogoNormal: !pageScrolled}"
                 src="assets/img/logo2.png" alt="LOGO"></a>
-        <span class="menu-wrapper">
-            <div class="menu-desktop">
-                <a href="#letsWork">About me</a>
-                <a href="#skill-set">Skill set</a>
-                <a href="#my-work">My Work</a>
-            </div>
-            <div class="languages-container" (click)="onLanguageChange()">
+        <div class="menu-desktop">
+            <a href="#letsWork">{{"about-me" | translate}}</a>
+            <a href="#skill-set">{{"skill-set" | translate}}</a>
+            <a href="#my-work">{{"my-work" | translate}}</a>
+            <div class="languages-container" (click)="menuService.onLanguageChange()">
                 <img (click)="translate.switchToOtherLang('de')" class="flag"
-                    [ngStyle]="{'display': isOnEnglish ? '': 'none'}" src="assets/img/germanFlag.png" alt="">
+                    [ngStyle]="{'display': menuService.isOnEnglish ? '': 'none'}" src="assets/img/germanFlag.png" alt="">
                 <img (click)="translate.switchToOtherLang('en')" class="flag"
-                    [ngStyle]="{'display': isOnEnglish ? 'none' : ''}" src="assets/img/englishFlag.png" alt="">
+                    [ngStyle]="{'display': menuService.isOnEnglish ? 'none' : ''}" src="assets/img/englishFlag.png" alt="">
             </div>
-            <div [ngClass]="{logoPaddingScrolled: pageScrolled, logoPaddingNormal: !pageScrolled}" (click)="openMenu()"
-                class="hamburger-menu">
-                <span [ngClass]="{rotateToRight: menuService.translateY}"></span>
-                <span [ngStyle]="{'display': menuService.translateY ? 'none' : 'block'}"></span>
-                <span [ngClass]="{rotateToLeft: menuService.translateY}"></span>
-            </div>
-        </span>
+        </div>
+        <div [ngClass]="{logoPaddingScrolled: pageScrolled, logoPaddingNormal: !pageScrolled}" (click)="openMenu()"
+            class="hamburger-menu">
+            <span [ngClass]="{rotateToRight: menuService.translateY}"></span>
+            <span [ngStyle]="{'display': menuService.translateY ? 'none' : 'block'}"></span>
+            <span [ngClass]="{rotateToLeft: menuService.translateY}"></span>
+        </div>
     </nav>
 </header>
 

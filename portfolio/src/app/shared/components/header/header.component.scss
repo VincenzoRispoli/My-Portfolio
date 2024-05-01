@@ -1,12 +1,9 @@
-@mixin flexCenter() {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+@import '../../../../styles.scss';
+
 
 @mixin menuBarsStyle() {
     display: block;
-    background: #5988FF;
+    background: $specialBlue;
     width: 30px;
     height: 2px;
     transition: all 0.5s cubic-bezier(.215, .61, .355, 1);
@@ -21,79 +18,73 @@ header {
     left: 0;
     right: 0;
     z-index: 5;
+}
 
-    >nav {
-        width: 100%;
-        max-width: 1440px;
-        padding: 15px;
+nav {
+    width: 100%;
+    max-width: 1440px;
+    padding: 15px;
+    transition: all 0.3s cubic-bezier(.215, .61, .355, 1);
+    @include flexCenter();
+
+    >a {
         transition: all 0.3s cubic-bezier(.215, .61, .355, 1);
-        @include flexCenter();
 
-
-        >a {
-            transition: all 0.3s cubic-bezier(.215, .61, .355, 1);
-
-            >img {
-                object-fit: cover;
-            }
+        >img {
+            object-fit: cover;
         }
+    }
+}
 
-        >.menu-wrapper {
-            display: flex;
-            justify-content: space-between;
-            width: 55%;
-            gap: 16px;
+.menu-desktop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
 
-            >.menu-desktop {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                flex: 1;
-                gap: 23px;
+    >a {
+        text-decoration: none;
+        color: $specialBlue;
+        font-size: 23px;
+        font-weight: 400;
+        font-family: 'Montserrat';
+        transition: all 0.15s cubic-bezier(.215, .61, .355, 1);
+        width: 25%;
+        text-align: center;
 
-                >a {
-                    text-decoration: none;
-                    color: #5988FF;
-                    font-size: 23px;
-                    font-weight: 400;
-                    font-family: 'Montserrat';
-                    transition: all 0.15s cubic-bezier(.215, .61, .355, 1);
-                    width: 25%;
-                    text-align: center;
-
-                    &:hover {
-                        font-weight: 800
-                    }
-                }
-            }
-
-            >.languages-container {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 10%;
-                transition: all 0.125s cubic-bezier(.215, .61, .355, 1);
-
-                &:hover {
-                    cursor: pointer;
-                    transform: scale(1.1);
-                }
-
-
-                >.flag {
-                    height: auto;
-                    height: 48px;
-                    width: 48px;
-                    object-fit: cover;
-                    border-radius: 100%;
-                    border: 2px solid #5988FF;
-                }
-            }
-
+        &:hover {
+            font-weight: 800
         }
     }
 
+    :nth-child(3) {
+        width: 27%;
+    }
+
+    >.languages-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 10%;
+        transition: all 0.125s cubic-bezier(.215, .61, .355, 1);
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+
+
+        >.flag {
+            height: 48px;
+            width: 48px;
+            object-fit: cover;
+            border-radius: 100%;
+            border: 2px solid $specialBlue;
+        }
+    }
 }
+
+
 
 .logoPaddingNormal {
     padding: 32px
@@ -114,9 +105,6 @@ header {
 }
 
 
-
-
-
 @media (min-width: 1051px) {
     .hamburger-menu {
         display: none;
@@ -124,35 +112,19 @@ header {
 }
 
 @media (max-width: 1050px) {
-    header {
-        >nav {
-            >.menu-wrapper {
-                flex-direction: row-reverse;
-                justify-content: flex-start;
 
-                >.menu-desktop {
-                    display: none;
-                }
+    .menu-desktop {
+        display: none;
+    }
 
-                >.hamburger-menu {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 8px;
-                    padding: 32px;
+    .hamburger-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 32px;
 
-                    :nth-child(1) {
-                        @include menuBarsStyle();
-                    }
-
-                    :nth-child(2) {
-                        @include menuBarsStyle();
-                    }
-
-                    :nth-child(3) {
-                        @include menuBarsStyle();
-                    }
-                }
-            }
+        >span {
+            @include menuBarsStyle();
         }
     }
 }

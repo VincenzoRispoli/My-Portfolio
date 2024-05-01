@@ -13,8 +13,7 @@ import { TranslationService } from '../../../shared/components/services/translat
 })
 export class MenuMobileComponent {
 
-  menuMobile = inject(MenuMobileService);
+  menuService = inject(MenuMobileService);
   translate = inject(TranslationService)
-
 
 }
