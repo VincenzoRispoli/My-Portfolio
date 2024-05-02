@@ -1,7 +1,8 @@
 <div>
+    <app-menu-mobile></app-menu-mobile>
     <div (mouseover)="translateToLeft()" (mouseleave)="translateToRight()" class="back">
-        <a href="#contact"><img [ngClass]="{translateX: isHover}" class="arrow-left" src="assets/icons/arrow-left.svg"
-                alt="">Back</a>
+        <a href="#footer"><img [ngClass]="{translateX: isHover}" class="arrow-left" src="assets/icons/arrow-left.svg"
+                alt="">{{"backArrow" | translate}}</a>
     </div>
     <h1>{{"title1" | translate}}</h1>
     <p>{{"text1" | translate}}

@@ -4,6 +4,7 @@ import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 import { TranslationService } from '../../shared/components/services/translation.service';
+import { MenuMobileService } from '../../shared/components/services/menu-mobile.service';
 
 
 @Component({
@@ -16,10 +17,11 @@ import { TranslationService } from '../../shared/components/services/translation
 export class ContactComponent {
 
   translate = inject(TranslationService);
+  menuService = inject(MenuMobileService);
 
   updateCheckbox: boolean = false;
   checked = false;
-  isHover:boolean = false;
+  isHover: boolean = false;
 
   borderGray = '2px solid #bbb';
   colorGray = '#bbb';
@@ -48,11 +50,11 @@ export class ContactComponent {
     }
   }
 
-  onHover(){
+  onHover() {
     this.isHover = true;
   }
 
-  onLeave(){
+  onLeave() {
     this.isHover = false;
   }
 

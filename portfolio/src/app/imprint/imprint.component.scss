@@ -1,16 +1,20 @@
+@import '../../styles.scss';
+
 .imprint {
     position: relative;
     height: 100vh;
     width: 100%;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    padding: 16px;
+    margin-top: 150px;
 
     >.info {
-        padding: 32px;
+        padding: 16px;
         font-family: 'Montserrat';
 
         >h1 {
-            color: #5988FF;
+            color: $specialBlue;
         }
 
         >p {
@@ -23,12 +27,42 @@
 
 
 .email {
-    color: #5988FF;
+    color: $specialBlue;
     text-decoration: none;
     font-size: 16px;
 
     &:hover {
         color: blue;
         text-decoration: underline;
+    }
+}
+
+.back {
+    padding: 16px;
+
+    >a {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        text-decoration: none;
+        color: $specialBlue;
+        font-size: 24px;
+        cursor: pointer;
+
+        &:hover {
+            font-weight: 700;
+        }
+
+        >.arrow-left {
+            height: 32px;
+            object-fit: contain;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(.215, .61, .355, 1);
+        }
+
+    }
+
+    &:hover .arrow-left {
+        transform: translateX(-10px);
     }
 }

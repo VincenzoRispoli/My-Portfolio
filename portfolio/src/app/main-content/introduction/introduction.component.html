@@ -4,11 +4,15 @@
         <img class="ellipseIntroSmall" src="assets/img/ellipseIntroSmall.png" alt="">
     </div>
     <div [ngClass]="{flexColumnGerman: !menuService.isOnEnglish}" class="letsWorkTogether-container">
-        <h2 [ngStyle]="{'text-align': menuService.isOnEnglish ? 'start' : 'center'}">{{"letsWorkTogether" | translate}}</h2>
-        <div class="description-container">
+        <h2 data-aos="fade-up" data-aos-offset="250" data-aos-once="true" class="letsWorkTitle"
+            [ngStyle]="{'text-align': menuService.isOnEnglish ? 'start' :'center'}">
+            {{"letsWorkTogether" | translate}}
+        </h2>
+        <div data-aos="fade-left" data-aos-offset="250" data-aos-delay="250" data-aos-once="true" class="description-container">
             <p class="text">{{"introductionOfMe" | translate}}</p>
             <div>
-                <a (mouseover)="onHover()" (mouseleave)="onLeave()" [ngClass]="{'fill-button':isHover}"
+                <a (mouseover)="onHover()" (mouseleave)="onLeave()"
+                    [ngClass]="{'fill-button':isHover && menuService.isOnEnglish, 'fillButtonGerman': isHover && !menuService.isOnEnglish}"
                     class="fill-button" href="#contact">{{"sendAMessage" | translate}}</a>
             </div>
         </div>

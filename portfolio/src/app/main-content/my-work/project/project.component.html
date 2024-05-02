@@ -1,6 +1,7 @@
 <div [ngClass]="{rowReverse: project.title == 'El Pollo Loco'}" class="project">
-    <img src="assets/img/{{project.image}}" alt="">
-    <div [ngClass]="{flexEnd: project.title == 'El Pollo Loco'}" class="project-infos">
+    <img data-aos="flip-up" data-aos-offset="300" data-aos-once="true" src="assets/img/{{project.image}}" alt="">
+    <div [attr.data-aos]="project.title == 'El Pollo Loco' ? 'fade-right' :'fade-left'" data-aos-offset="300"
+        data-aos-once="true" [ngClass]="{flexEnd: project.title == 'El Pollo Loco'}" class="project-infos">
         <h3>{{project.title}}</h3>
         <span>{{project.technologies}}</span>
         <p>{{project.description | translate}}</p>

@@ -1,13 +1,9 @@
-@mixin marginBlockNone() {
-    margin-block-start: 0;
-    margin-block-end: 0;
-}
+@import '../../../styles.scss';
 
 .my-work-section {
     position: relative;
     padding: 120px 56px 56px 56px;
-    background: rgb(255, 255, 255);
-    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(241, 245, 255, 1) 0%, rgba(241, 245, 255, 1) 0%, rgba(237, 242, 255, 1) 23%, rgba(234, 240, 255, 0.6840861344537815) 100%);
+    @include whiteGradientBg();
 }
 
 .my-work-container {
@@ -16,48 +12,38 @@
 
     >h2 {
         font-size: 6.2vw;
-        color: #5988FF;
+        color: $specialBlue;
         font-weight: 800;
         font-family: 'Baloo';
-        @include marginBlockNone();
+        @include marginBlock0();
     }
 
     >p {
         font-size: 23px;
         font-family: 'Montserrat';
         font-weight: 400;
-        @include marginBlockNone();
+        @include marginBlock0();
     }
 }
 
 .ellipseMyWorkSmall {
-    position: absolute;
-    top: 16px;
-    left: 563px;
+    @include overlayFull(absolute, $t: 16px, $l: 563px);
 }
 
 .ellipseMyWorkMedium {
-    position: absolute;
-    top: 96px;
-    right: 150px;
+    @include overlayFull(absolute, $t: 96px, $r: 150px);
 }
 
 .ellipseHalfMyWork {
-    position: absolute;
-    left: 0;
-    top: 650px;
+    @include overlayFull(absolute, $t: 650px, $l: 0);
 }
 
 .ellipseGiantMyWork {
-    position: absolute;
-    right: 0;
-    top: 800px;
+    @include overlayFull(absolute, $t: 800px, $r: 0);
 }
 
 .ellipseSmallestMyWork {
-    position: absolute;
-    left: 100px;
-    top: 1230px;
+    @include overlayFull(absolute, $t: 1230px, $l: 100px);
 }
 
 @media screen and (min-width: 1200px) {
@@ -74,7 +60,7 @@
     }
 
     .ellipseMyWorkMedium {
-        right: 64px;
+        right: 48px;
     }
 
     .ellipseGiantMyWork {
@@ -111,7 +97,7 @@
 
     .ellipseMyWorkMedium {
         height: 85px;
-        top: 73px;
+        top: 38px
     }
 
     .ellipseMyWorkSmall {

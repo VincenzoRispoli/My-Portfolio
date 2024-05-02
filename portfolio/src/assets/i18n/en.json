@@ -28,11 +28,15 @@
     "check-text1": "I have read",
     "privacy-policy": "privacy policy",
     "check-text2": "and agree to the processing of my data as outlined",
+    "say-hello": "Say Hello ;)",
     "imprint": "Imprint",
     "according-info": "Information according to § 5 TMG",
     "Represented-by": "Represented by:",
     "contact-Imprint": "Contact",
     "telephone": "Phone:",
+    "finalTextImprint": "Website Imprint created by",
+    "finalTextImprint2":"from the",
+    "lawOffice": "Hasselbach Law Office",
     "title1": "Privacy Policy",
     "text1": "The controller within the meaning of data protection laws, in particular the EU General Data Protection Regulation (GDPR), is:",
     "title2": "Your rights as a data subject",
@@ -98,5 +102,7 @@
     "text29": "If you have any questions about data protection, please send us an e-mail or contact the person responsible for data protection in our organisation directly:",
     "text30": "The privacy policy was created with the help of activeMind AG, the experts for",
     "link4": "External data protection officer",
-    "switchTo":"Switch to:"
+    "switchTo":"Switch to:",
+    "backArrow": "Back"
+
 }

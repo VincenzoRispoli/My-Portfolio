@@ -1,5 +1,8 @@
+@import '../../../styles.scss';
+
 .introduction {
     >.ellipse-Big-Container {
+        @include dFlex(row, center);
         display: flex;
         justify-content: center;
         margin-top: -100px;
@@ -12,18 +15,16 @@
 }
 
 .letsWorkTogether-container {
-    display: flex;
-    justify-content: space-between;
+    @include dFlex(row, space-between);
     padding: 56px;
 
-    >h2 {
+    >.letsWorkTitle {
         font-family: 'Baloo';
         font-size: 6.2vw;
         font-weight: 800;
         color: #5988FF;
         line-height: 1;
-        margin-block-start: 0;
-        margin-block-end: 0;
+        @include marginBlock0();
     }
 
     >img {
@@ -32,25 +33,20 @@
     }
 
     >.description-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include dFlex(column, $ai: center);
         width: 50%;
 
         >p {
             font-size: 24px;
             font-family: 'Montserrat';
             font-weight: 400;
-            margin-block-start: 0;
-            margin-block-end: 0;
+            @include marginBlock0();
             margin-bottom: 32px;
         }
 
         >div {
             height: auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include dFlex(row, center, center);
             width: 100%;
 
             >a {
@@ -59,10 +55,10 @@
                 background: #fff;
                 text-decoration: none;
                 border-radius: 10px;
-                border: 2px solid #5988FF;
+                border: 2px solid $specialBlue;
                 padding: 15px 30px;
                 font-size: 24px;
-                color: #5888FF;
+                color: $specialBlue;
                 font-family: 'Montserrat';
                 cursor: pointer;
             }
@@ -74,24 +70,31 @@
     width: 82px;
     height: 82px;
     object-fit: contain;
-    position: absolute;
-    bottom: -25px;
-    right: 185px;
+    @include overlayFull(absolute, $r: 185px, $b: -25px);
     z-index: 2;
 }
 
 .fill-button::before {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include dFlex(row, center, center);
+    @include blueGradientButtonAnimation();
+    @include overlayFull(absolute, $t: 0, $l: 0);
     content: "Send a message";
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 0%;
     height: 100%;
-    background: rgb(89, 136, 255);
-    background: radial-gradient(circle, rgba(89, 136, 255, 1) 0%, rgba(89, 136, 255, 1) 54%, rgba(0, 67, 240, 1) 86%);
+    color: #fff;
+    font-size: 24px;
+    border-radius: 10px;
+    animation: fillAnimation 0.09s forwards;
+    /* Duration and direction of animation */
+}
+
+.fillButtonGerman::before {
+    @include dFlex(row, center, center);
+    @include blueGradientButtonAnimation();
+    @include overlayFull(absolute, $t: 0, $l: 0);
+    content: "Nachricht senden";
+    width: 0%;
+    height: 100%;
     color: #fff;
     font-size: 24px;
     border-radius: 10px;
@@ -108,41 +111,51 @@
     100% {
         width: 100%;
         transform: scale(1.1) translateX(10px);
-        background: rgb(89, 136, 255);
-        background: radial-gradient(circle, rgba(89, 136, 255, 1) 0%, rgba(89, 136, 255, 1) 54%, rgba(0, 67, 240, 1) 86%);
+        @include blueGradientButtonAnimation();
     }
 }
 
 .flexColumnGerman {
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
+    @include dFlex(column, $ai: center, $g: 16px);
+}
+
+@media screen and (min-width: 1051px) {
+    .letsWorkTogether-container {
+        >.letsWorkTitle {
+            font-size: 96px;
+        }
+    }
 }
 
 @media screen and (min-width: 1200px) {
     .letsWorkTogether-container {
-        >h2 {
+        >.letsWorkTitle {
             font-size: 118px;
         }
     }
 }
 
 @media (max-width: 1050px) {
+
     .letsWorkTogether-container {
-        >h2 {
-            font-size: 64px;
+        flex-direction: column;
+
+        >.letsWorkTitle {
+            font-size: 76px;
         }
 
         >.description-container {
-            width: 70%;
+            width: 100%;
         }
-
     }
 
-    .ellipseIntroSmall {
-        right: 150px;
-    }
+
 }
+
+.ellipseIntroSmall {
+    right: 150px;
+}
+
 
 @media (max-width: 768px) {
     .introduction {
@@ -163,10 +176,12 @@
     }
 
     .letsWorkTogether-container {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 24px;
+        @include dFlex(column, $ai: flex-start, $g: 24px);
         padding: 32px;
+
+        >.letsWorkTitle {
+            font-size: 42px;
+        }
 
         >.description-container {
             width: 100%;
@@ -187,11 +202,15 @@
     .letsWorkTogether-container {
         padding: 24px;
 
-        >h2 {
-            font-size: 48px;
+        >.letsWorkTitle {
+            font-size: 28px;
         }
 
         >.description-container {
+            >p {
+                font-size: 16px;
+            }
+
             >div {
                 >a {
                     padding: 15px 15px;

@@ -1,0 +1,32 @@
+@import '../../../styles.scss';
+
+@mixin labelNameAndEmail($t, $l) {
+    position: absolute;
+    top: $t;
+    left: $l;
+    background: #fff;
+    padding: 4px;
+    transition: all 0.3s cubic-bezier(.215, .61, .355, 1);
+    cursor: pointer;
+}
+
+@mixin inputStyle($p) {
+    border-radius: 10px;
+    border: 2px solid #5988FF;
+    padding: $p;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    font-family: 'Montserrat';
+}
+
+@mixin submitButtonStyle() {
+    border-radius: 10px;
+    border: 2px solid $specialBlue;
+    color: $specialBlue;
+    padding: 15px 30px;
+    font-size: 24px;
+    background: #fff;
+    position: relative;
+    cursor: pointer;
+}

@@ -12,5 +12,7 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './imprint.component.scss'
 })
 export class ImprintComponent {
-  translate = inject(TranslationService)
+  translate = inject(TranslationService);
+
+
 }

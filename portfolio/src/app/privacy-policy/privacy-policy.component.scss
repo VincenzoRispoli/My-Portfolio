@@ -1,14 +1,13 @@
+@import '../../styles.scss';
+
 div {
-    padding: 16px;
-    margin-top: 60px;
+    margin-top: 180px;
 
     >.back {
         >a {
-            display: flex;
-            align-items: center;
-            gap: 16px;
+            @include dFlex($ai:center, $g:16px);
             text-decoration: none;
-            color: #5988FF;
+            color: $specialBlue;
             font-size: 24px;
             cursor: pointer;
 

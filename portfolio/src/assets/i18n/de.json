@@ -28,11 +28,15 @@
     "check-text1": "I habe die",
     "privacy-policy": "Datenschutzerklärung",
     "check-text2": "gelesen und erkläre mich mit der Verarbeitung meiner Daten wie beschrieben einverstanden",
+    "say-hello": "Sage Hallo ;)",
     "imprint": "Impressum",
     "according-info": "Angaben gemäß § 5 TMG",
     "Represented-by": "Vertreten durch:",
     "contact-Imprint": "Kontakt",
     "telephone": "Telefon:",
+    "finalTextImprint": "Website Impressum erstellt durch",
+    "finalTextImprint2":"von der",
+    "lawOffice": "Kanzlei Hasselbach",
     "title1": "Datenschutzerklärung",
     "text1": "Verantwortlicher im Sinne der Datenschutzgesetze, insbesondere der EU-Datenschutzgrundverordnung (DSGVO), ist:",
     "title2": "Ihre Betroffenenrechte",
@@ -98,5 +102,6 @@
     "text29": "Wenn Sie Fragen zum Datenschutz haben, schreiben Sie uns bitte eine E-Mail oder wenden Sie sich direkt an die für den Datenschutz verantwortliche Person in unserer Organisation:",
     "text30": "Die Datenschutzerklärung wurde mithilfe der activeMind AG erstellt, den Experten für",
     "link4": "externe Datenschutzbeauftragte",
-    "switchTo": "Umschalten auf:"
+    "switchTo": "Umschalten auf:",
+    "backArrow": "Zurück"
 }

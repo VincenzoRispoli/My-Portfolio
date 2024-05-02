@@ -1,33 +1,17 @@
-@mixin marginBlockNone() {
-    margin-block-start: 0;
-    margin-block-end: 0;
-}
-
-@mixin flexCenter() {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+@import '../../../../styles.scss';
 
 .footer {
     background-color: #5988FF;
     background: linear-gradient(90deg, rgba(89, 136, 255, 1) 0%, rgba(89, 136, 255, 0.8381477591036415) 0%, rgba(0, 67, 240, 0.6392682072829132) 0%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
+    @include dFlex(column, $jc: center);
     padding: 56px;
 
     >.logoCopySocial-container {
-
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        @include dFlex(row, space-between, center);
         width: 100%;
 
         >.logo-container {
-            display: flex;
-            align-items: center;
+            @include dFlex($ai: center);
             width: 25%;
 
             >.logo {
@@ -48,11 +32,8 @@
         }
 
         >span {
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
+            @include dFlex(row, flex-end, center, 42px);
             width: 25%;
-            gap: 42px;
 
             >a {
                 >img {
@@ -60,7 +41,7 @@
                     transition: all 0.2s cubic-bezier(.215, .61, .355, 1);
 
                     &:hover {
-                        transform: scale(1.2)
+                        transform: scale(1.2);
                     }
                 }
             }
@@ -70,11 +51,11 @@
 }
 
 .imprint-wrapper {
-    @include flexCenter();
+    @include dFlex(row, center, center);
+    width: 100%;
 
     >.imprint-little-wrapper {
-        flex-direction: column;
-        @include flexCenter();
+        @include dFlex(column, center, center);
         overflow-x: hidden;
 
         a {
@@ -138,13 +119,13 @@
             }
 
             >h2 {
-                @include marginBlockNone();
+                @include marginBlock0();
                 width: 100%;
             }
 
             >span {
+                @include dFlex(row, center, center);
                 width: 100%;
-                @include flexCenter();
             }
         }
 

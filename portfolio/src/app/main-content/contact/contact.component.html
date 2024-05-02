@@ -6,17 +6,18 @@
                 d="M112 244l144-144 144 144M256 120v292" />
         </svg>
     </a>
-    <h2>{{"contactTitle" | translate}}</h2>
+    <h2 data-aos="fade-up" data-aos-offset="250" data-aos-once="true">{{"contactTitle" | translate}}</h2>
     <div class="wrapper">
-        <div class="contact-info">
+        <div data-aos="fade-right" data-aos-offset="250" data-aos-once="true" class="contact-info">
             <h3>{{"contact-subTitle" | translate}}</h3>
             <p class="contact-me-content">{{"contact-text" | translate}}</p>
             <p class="call-to-action">{{"contact-cta" | translate}} <b>{{"contact-me" | translate}}</b></p>
         </div>
         <form class="contact-form" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-            <div class="input-name-container">
+            <div data-aos="fade-left" data-aos-offset="50" data-aos-once="true" class="input-name-container">
                 <div class="label-and-inputName-wrapper">
-                    <label [ngClass]="{labelAnimation: animateName}" class="name-label" for="name">{{"your-name" | translate}}</label>
+                    <label [ngClass]="{labelAnimation: animateName}" class="name-label" for="name">{{"your-name" |
+                        translate}}</label>
                     <input (focus)="translateUp('name')" (blur)="translateBack('name', contactData.name)"
                         [(ngModel)]="contactData.name" id="name" name="name" class="input-name" type="text"
                         minlength="3" #name="ngModel" required>
@@ -33,9 +34,10 @@
                 </div>
             </div>
 
-            <div class="input-email-container">
+            <div data-aos="fade-left" data-aos-offset="100" data-aos-once="true" class="input-email-container">
                 <div class="label-and-inputEmail-wrapper">
-                    <label [ngClass]="{labelAnimation: animateEmail}" class="email-label" for="email">{{"your-email" | translate}}</label>
+                    <label [ngClass]="{labelAnimation: animateEmail}" class="email-label" for="email">{{"your-email" |
+                        translate}}</label>
                     <input (focus)="translateUp('email')" (blur)="translateBack('email', contactData.email)"
                         [(ngModel)]="contactData.email" id="email" name="email" class="input-email" type="email"
                         #email="ngModel" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
@@ -52,7 +54,7 @@
                 </div>
             </div>
 
-            <div class="textarea-container">
+            <div data-aos="fade-left" data-aos-offset="150" data-aos-once="true" class="textarea-container">
                 <div class="label-and-textarea-wrapper">
                     <label [ngClass]="{labelTextareaAnimation: animateTextarea}" class="message-label"
                         for="message">{{"your-message" | translate}}</label>
@@ -71,7 +73,7 @@
                     }
                 </div>
             </div>
-            <div class="checkbox-container">
+            <div data-aos="fade-left" data-aos-offset="200" data-aos-once="true" class="checkbox-container">
                 <div class="chekbox-and-policy-wrapper">
                     <div class="label-and-checkbox-wrapper">
                         <label class="custom-checkbox" for="checkbox"></label>
@@ -80,8 +82,9 @@
                         <img [ngStyle]="{'display': checkbox.valid ? '' : 'none'}" class="checkmark"
                             src="assets/icons/checkmark.svg" alt="">
                     </div>
-                    <span class="privacy-policy-container">{{"check-text1" | translate}} <a href="/privacy-policy">{{"privacy-policy" | translate}}</a>
-                      {{"check-text2" | translate}}
+                    <span class="privacy-policy-container">{{"check-text1" | translate}} <a
+                            href="/privacy-policy">{{"privacy-policy" | translate}}</a>
+                        {{"check-text2" | translate}}
                     </span>
                 </div>
                 <div class="requiredBanner">
@@ -91,10 +94,12 @@
                 </div>
             </div>
             @if(name.valid && email.valid && message.valid && checkbox.valid ){
-            <button (mouseover)="onHover()" (mouseleave)="onLeave()" [ngClass]="{fillButton: isHover}"
-                [disabled]="false">SayHello ;)</button>
+            <button (mouseover)="onHover()" (mouseleave)="onLeave()"
+                [ngClass]="{'fillButton': isHover && menuService.isOnEnglish, 'fillButtonGerman': isHover && !menuService.isOnEnglish}"
+                [disabled]="false">{{"say-hello" | translate}}</button>
             } @else {
-            <button [ngStyle]="{'border': borderGray, 'color': colorGray}" [disabled]="true">Say hello ;)</button>
+            <button [ngStyle]="{'border': borderGray, 'color': colorGray}" [disabled]="true">{{"say-hello" |
+                translate}}</button>
             }
         </form>
     </div>

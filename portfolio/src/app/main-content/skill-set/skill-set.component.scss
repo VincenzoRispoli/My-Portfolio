@@ -1,7 +1,7 @@
+@import '../../../styles.scss';
+
 .skill-set-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include dFlex(column, $ai: center);
     padding: 120px 48px 120px 48px;
     background-color: #5988FF;
     background: linear-gradient(90deg, rgba(89, 136, 255, 1) 0%, rgba(89, 136, 255, 0.8381477591036415) 0%, rgba(0, 67, 240, 0.6392682072829132) 0%);
@@ -12,33 +12,23 @@
         font-size: 6.2vw;
         font-weight: 400px;
         font-family: 'Baloo';
-        margin-block-start: 0;
-        margin-block-end: 0;
+        @include marginBlock0();
         margin-bottom: 32px;
     }
 }
 
 .skill-set-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 47px;
+    @include dFlex(column, $ai: center, $g: 47px);
     width: 70%;
 }
 
 .skill-set {
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
+    @include dFlex(row, space-evenly, center, 80px);
     flex-wrap: wrap;
-    align-items: center;
-    gap: 80px;
+    width: 100%;
 
     >.skill {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
+        @include dFlex(column, $ai: center, $g: 10px);
         cursor: pointer;
         width: 10%;
 

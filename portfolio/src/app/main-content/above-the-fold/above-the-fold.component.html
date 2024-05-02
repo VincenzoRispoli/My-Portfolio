@@ -2,14 +2,16 @@
     <app-menu-mobile></app-menu-mobile>
     <img class=" ellipseHero" src="assets/img/ellipseHero.svg" alt="">
     <div class="wrapper">
-        <div class="profil-photo-container">
+        <div data-aos="fade-right" data-aos-once="true" class="profil-photo-container">
             <img class="me" src="assets/img/me.png" alt="">
         </div>
         <div class="titlesAndSocialWrapper">
             <div class="titles">
-                <h1 [ngStyle]="{'transform': translateGreet ? 'translateX(0%)': 'translateX(150%)'}">{{ "greet" | translate }}
+                <h1 [ngStyle]="{'transform': translateGreet ? 'translateX(0%)': 'translateX(150%)'}">{{ "greet" |
+                    translate }}
                 </h1>
-                <h2 [ngStyle]="{'transform': translateFronEnd ? 'translateX(0%)': 'translateX(150%)'}">{{"profession" | translate}}<br>
+                <h2 [ngStyle]="{'transform': translateFronEnd ? 'translateX(0%)': 'translateX(150%)'}">{{"profession" |
+                    translate}}<br>
                 </h2>
             </div>
             <div class="vector-bar-and-socialNetwork-container">

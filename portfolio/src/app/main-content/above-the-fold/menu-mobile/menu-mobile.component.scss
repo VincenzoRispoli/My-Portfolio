@@ -1,17 +1,18 @@
-.menu-mobile {
-    position: fixed;
-    height: 100vh;
-    width: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
-    z-index: 4;
+@import '../../../../styles.scss';
+
+@mixin whiteGradientBgMenuMobile() {
     background: rgb(255, 255, 255);
     background: linear-gradient(159deg, rgba(255, 255, 255, 0.85) 0%, rgba(234, 240, 255, 0.85) 75%);
-    transition: all 0.4s cubic-bezier(.215, .61, .355, 1);
+}
+
+.menu-mobile {
+    height: 100vh;
+    width: 100%;
+    @include overlayFull(fixed, 0, 0, 0, 0);
+    @include dFlex(column);
+    @include whiteGradientBgMenuMobile();
+    z-index: 4;
+    transition: all 0.225s cubic-bezier(.215, .61, .355, 1);
     transform: translateX(100%);
 
 
@@ -23,16 +24,12 @@
     >.links-container {
         width: 100%;
         flex: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 56px;
+        @include dFlex(column, center, center, 56px);
 
         >a {
             font-size: 32px;
             text-decoration: none;
-            color: #5988FF;
+            color: $specialBlue;
             font-weight: 600;
 
             &:focus {
@@ -43,30 +40,25 @@
 }
 
 .languages-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include dFlex(row, center, center, 32px);
     width: 100%;
-    gap: 32px;
 
     >span {
         font-size: 32px;
         text-decoration: none;
-        color: #5988FF;
+        color: $specialBlue;
         font-weight: 600;
     }
 
     >.flags-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include dFlex($jc: center, $ai: center);
 
         >.flag {
             height: 48px;
             width: 48px;
             object-fit: cover;
             border-radius: 50%;
-            border: 2px solid
+            border: 2px solid $specialBlue;
         }
     }
 }
@@ -97,6 +89,7 @@
 
     .languages-container {
         flex-direction: column;
+
         >span {
             font-size: 24px;
         }

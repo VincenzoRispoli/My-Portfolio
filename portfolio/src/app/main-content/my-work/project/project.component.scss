@@ -1,7 +1,7 @@
+@import '../../../../styles.scss';
+
 .project {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    @include dFlex(row, space-between, flex-end);
     margin-bottom: 120px;
 
     >img {
@@ -19,21 +19,17 @@
 }
 
 .project-infos {
+    @include dFlex(column, flex-end, flex-start);
     width: 45%;
     height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-end;
     z-index: 1;
 
     >h3 {
         font-size: 45px;
         font-weight: 800;
-        color: #5988FF;
+        color: $specialBlue;
         font-family: 'Baloo';
-        margin-block-start: 0;
-        margin-block-end: 0;
+        @include marginBlock0();
     }
 
     >span {
@@ -45,22 +41,19 @@
     }
 
     >p {
-        margin-block-start: 0;
-        margin-block-end: 0;
+        @include marginBlock0();
         margin-bottom: 35px;
     }
 
     >.project-btn-container {
-        display: flex;
-        align-items: center;
-        gap: 8px;
+        @include dFlex($jc: none, $ai: center, $g: 8px);
         width: 100%;
 
         >.gitHub-btn {
             border-radius: 10px;
             padding: 15px 30px;
-            border: 2px solid #5988FF;
-            color: #5988FF;
+            border: 2px solid $specialBlue;
+            color: $specialBlue;
             background: #fff;
             font-size: 24px;
             text-decoration: none;
@@ -70,8 +63,8 @@
         >.liveTest-btn {
             border-radius: 10px;
             padding: 15px 30px;
-            border: 2px solid #5988FF;
-            background: #5988FF;
+            border: 2px solid $specialBlue;
+            background: $specialBlue;
             color: #fff;
             font-size: 24px;
             text-decoration: none;
@@ -89,24 +82,18 @@
     100% {
         width: 100%;
         transform: scale(1.05);
-        background: rgb(89, 136, 255);
-        background: radial-gradient(circle, rgba(89, 136, 255, 1) 0%, rgba(89, 136, 255, 1) 54%, rgba(0, 67, 240, 1) 86%);
+        @include blueGradientButtonAnimation();
     }
 }
 
 
 .fill-button::before {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include dFlex(row, center, center);
+    @include blueGradientButtonAnimation();
+    @include overlayFull(absolute, $t: 0, $l: 0);
     content: "Github";
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 0%;
     height: 100%;
-    background: rgb(89, 136, 255);
-    background: radial-gradient(circle, rgba(89, 136, 255, 0.5608368347338936) 0%, rgba(89, 136, 255, 0.7597163865546218) 54%, rgba(0, 67, 240, 0.7401085434173669) 86%);
     color: #fff;
     font-size: 24px;
     border-radius: 10px;
@@ -115,17 +102,12 @@
 }
 
 .fill-LiveTest-button::before {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include dFlex(row, center, center);
+    @include blueGradientButtonAnimation();
+    @include overlayFull(absolute, $t: 0, $l: 0);
     content: "Live Test";
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 0%;
     height: 100%;
-    background: rgb(89, 136, 255);
-    background: radial-gradient(circle, rgba(89, 136, 255, 0.5608368347338936) 0%, rgba(89, 136, 255, 0.7597163865546218) 54%, rgba(0, 67, 240, 0.7401085434173669) 86%);
     color: #fff;
     font-size: 24px;
     border-radius: 10px;
@@ -134,8 +116,7 @@
 }
 
 .flexBtnContainer {
-    font-display: flex;
-    justify-content: flex-end;
+    @include dFlex($jc: flex-end);
 }
 
 @media (min-width: 769px) {
@@ -178,10 +159,7 @@
 
 @media (max-width: 768px) {
     .project {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 32px;
+        @include dFlex(column, $ai: center, $g: 32px);
 
         >img {
             width: 100%;

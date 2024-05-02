@@ -13,10 +13,7 @@ header {
     display: flex;
     justify-content: center;
     width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    @include overlayFull(fixed, 0, 0, static, 0);
     z-index: 5;
 }
 
@@ -25,7 +22,7 @@ nav {
     max-width: 1440px;
     padding: 15px;
     transition: all 0.3s cubic-bezier(.215, .61, .355, 1);
-    @include flexCenter();
+    @include dFlex($jc: space-between, $ai: center);
 
     >a {
         transition: all 0.3s cubic-bezier(.215, .61, .355, 1);
