@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit, inject } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { TranslationService } from '../../shared/components/services/translation.service';
+import { MenuMobileService } from '../../shared/components/services/menu-mobile.service';
 
 @Component({
   selector: 'app-skill-set',
@@ -11,6 +12,7 @@ import { TranslationService } from '../../shared/components/services/translation
   styleUrl: './skill-set.component.scss'
 })
 export class SkillSetComponent implements OnInit {
+  menuService = inject(MenuMobileService);
   translate = inject(TranslationService)
   translationY: boolean[] = [];
   translationY2: boolean[] = [];

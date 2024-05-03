@@ -124,7 +124,7 @@
             }
 
             >span {
-                @include dFlex(row, center, center);
+                @include dFlex(row, center, center, 24px);
                 width: 100%;
             }
         }

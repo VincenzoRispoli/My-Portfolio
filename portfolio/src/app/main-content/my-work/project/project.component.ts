@@ -23,7 +23,7 @@ export class ProjectComponent {
     title: 'Join',
     technologies: 'HTML | CSS | Javascript',
     description: "join-description",
-    linkGithub: 'https://github.com/VincenzoRispoli/El-Pollo-Loco',
+    linkGithub: 'https://github.com/VincenzoRispoli/Join',
     linkLiveTest: 'https://elpolloloco.vincenzo-rispoli.de/',
   }
 

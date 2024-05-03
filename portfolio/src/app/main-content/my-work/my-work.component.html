@@ -5,7 +5,8 @@
     <img class="ellipseGiantMyWork" src="assets/img/ellipseGiantMyWork.png" alt="">
     <img class="ellipseSmallestMyWork" src="assets/img/ellipseSmallestMyWork.png" alt="">
     <div class="my-work-container">
-        <h2 data-aos="fade-up" data-aos-once="true">{{"my-workTitle" | translate}}</h2>
+        <h2 data-aos="fade-up" [attr.data-aos-offset]="menuService.isOnEnglish ? 0 : 300" data-aos-once="true">
+            {{"my-workTitle" | translate}}</h2>
         <p data-aos="fade-right" data-aos-once="true">{{"my-workDescription" | translate}}</p>
     </div>
 

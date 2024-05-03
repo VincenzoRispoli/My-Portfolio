@@ -1,4 +1,4 @@
-<nav [class.traslationY]="menuService.translateY" class="menu-mobile">
+<nav [ngClass]="{traslationX: menuService.translateX}" class="menu-mobile">
     <div class="links-container">
         <a (click)="menuService.onLinkClicked()" href="#letsWork">{{"about-me" | translate}}</a>
         <a (click)="menuService.onLinkClicked()" href="#skill-set">{{"skill-set" | translate}}</a>

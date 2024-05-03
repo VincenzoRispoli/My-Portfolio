@@ -3,6 +3,7 @@
 .project {
     @include dFlex(row, space-between, flex-end);
     margin-bottom: 120px;
+    overflow: hidden;
 
     >img {
         width: 50%;
@@ -188,5 +189,10 @@
                 }
             }
         }
+    }
+
+    .fill-button::before,
+    .fill-LiveTest-button::before {
+        font-size: 16px;
     }
 }

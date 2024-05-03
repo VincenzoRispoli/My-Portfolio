@@ -1,11 +1,12 @@
 @import '../../styles.scss';
 
 div {
-    margin-top: 180px;
+    margin-top: 80px;
+    padding: 16px;
 
     >.back {
         >a {
-            @include dFlex($ai:center, $g:16px);
+            @include dFlex($jc: flex-start, $ai: center, $g: 16px);
             text-decoration: none;
             color: $specialBlue;
             font-size: 24px;
@@ -26,9 +27,16 @@ div {
     }
 }
 
+@media (max-width: 768px) {
+    div {
+        margin-top: 64px;
+    }
+}
+
 @media (max-width: 430px) {
     div {
         padding: 8px;
+        // margin-top: 54px;
 
         >h1 {
             font-size: 24px;

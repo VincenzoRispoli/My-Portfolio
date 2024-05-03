@@ -3,6 +3,7 @@
 .my-work-section {
     position: relative;
     padding: 120px 56px 56px 56px;
+    overflow: hidden;
     @include whiteGradientBg();
 }
 

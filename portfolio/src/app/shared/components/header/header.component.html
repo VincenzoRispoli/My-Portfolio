@@ -16,9 +16,9 @@
         </div>
         <div [ngClass]="{logoPaddingScrolled: pageScrolled, logoPaddingNormal: !pageScrolled}" (click)="openMenu()"
             class="hamburger-menu">
-            <span [ngClass]="{rotateToRight: menuService.translateY}"></span>
-            <span [ngStyle]="{'display': menuService.translateY ? 'none' : 'block'}"></span>
-            <span [ngClass]="{rotateToLeft: menuService.translateY}"></span>
+            <span [ngClass]="{rotateToRight: menuService.translateX}"></span>
+            <span [ngStyle]="{'display': menuService.translateX ? 'none' : 'block'}"></span>
+            <span [ngClass]="{rotateToLeft: menuService.translateX}"></span>
         </div>
     </nav>
 </header>

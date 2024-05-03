@@ -16,6 +16,7 @@
 
 .letsWorkTogether-container {
     @include dFlex(row, space-between);
+    overflow: hidden;
     padding: 56px;
 
     >.letsWorkTitle {
@@ -110,7 +111,7 @@
 
     100% {
         width: 100%;
-        transform: scale(1.1) translateX(10px);
+        transform: scale(1.1);
         @include blueGradientButtonAnimation();
     }
 }
@@ -224,6 +225,14 @@
         right: 16px;
         width: 60px;
         height: 60px;
+    }
+
+    .fill-button::before {
+        font-size: 18px;
+    }
+
+    .fillButtonGerman::before {
+        font-size: 18px;
     }
 
 }

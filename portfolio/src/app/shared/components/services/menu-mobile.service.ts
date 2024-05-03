@@ -5,14 +5,14 @@ import { Injectable } from '@angular/core';
 })
 export class MenuMobileService {
 
-  translateY: boolean = false;
+  translateX: boolean = false;
   menuIsOpen: boolean = false;
   isOnEnglish: boolean = true;
 
   constructor() { }
 
   openMenuInNavbar() {
-    this.translateY = !this.translateY;
+    this.translateX = !this.translateX;
     this.menuIsOpen = !this.menuIsOpen;
     if (this.menuIsOpen) {
       document.body.classList.add('overflowHidden');
@@ -22,7 +22,7 @@ export class MenuMobileService {
   }
 
   onLinkClicked() {
-    this.translateY = false;
+    this.translateX = false;
     this.menuIsOpen = false;
     document.body.classList.remove('overflowHidden');
   }

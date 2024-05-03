@@ -36,6 +36,8 @@ $specialBlue: #5988FF;
 *::after,
 *::before {
     box-sizing: border-box;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 html {

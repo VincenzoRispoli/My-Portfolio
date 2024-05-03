@@ -95,7 +95,7 @@
 }
 
 .social-network-container {
-    @include dFlex(column, $ai:center);
+    @include dFlex(column, $ai: center);
     gap: 25px;
     z-index: 1;
 
@@ -192,7 +192,7 @@
             width: 100%;
 
             >.me {
-                width: 400px;
+                width: 350px;
             }
         }
 
@@ -223,7 +223,7 @@
 
 @media (max-width: 430px) {
     .hero-section {
-        @include dFlex(column-reverse, $ai:center);
+        @include dFlex(column-reverse, $ai: center);
 
         >.ellipseHero {
             left: -200px;
@@ -269,7 +269,7 @@
             >.profil-photo-container {
                 >.me {
                     height: auto;
-                    width: 300px;
+                    width: 270px;
                 }
             }
         }

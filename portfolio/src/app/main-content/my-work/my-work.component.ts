@@ -1,8 +1,9 @@
-import { CommonModule, HashLocationStrategy } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { ProjectComponent } from './project/project.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { TranslationService } from '../../shared/components/services/translation.service';
+import { MenuMobileService } from '../../shared/components/services/menu-mobile.service';
 
 
 @Component({
@@ -14,6 +15,7 @@ import { TranslationService } from '../../shared/components/services/translation
 })
 export class MyWorkComponent {
   translate = inject(TranslationService);
+  menuService = inject(MenuMobileService);
   
   constructor() {
 
@@ -25,7 +27,7 @@ export class MyWorkComponent {
       image: 'join.png',
       technologies: 'HTML | CSS | Javascript',
       description: "join-decription",
-      linkGithub: 'https://github.com/VincenzoRispoli/El-Pollo-Loco',
+      linkGithub: 'https://github.com/VincenzoRispoli/Join',
       linkLiveTest: 'https://join.vincenzo-rispoli.de/',
     },
     {
