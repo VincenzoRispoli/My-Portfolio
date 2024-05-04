@@ -1,0 +1,10 @@
+<div [ngStyle]="{'transform': dialogService.isSubmitted ? 'translateY(0%)' : 'translateY(150%)',}"
+    class="success-pop-up">
+    <span>
+        <img class="frame" src="assets/icons/frameV.png" alt="">
+        <h3>{{"sendMailMessage" | translate}}</h3>
+    </span>
+    <button
+        [ngClass]="{fillDialogButton: isHover && menuService.isOnEnglish , fillDialogButtonGerman: isHover && !menuService.isOnEnglish}"
+        (mouseover)="onHover()" (mouseleave)="onLeave()" (click)="dialogService.onClickDialogButton()">{{"iGotIt" | translate}}</button>
+</div>

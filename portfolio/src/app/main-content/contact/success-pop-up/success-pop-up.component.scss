@@ -1,0 +1,85 @@
+@import '../../../../styles.scss';
+
+div {
+    @include dFlex(column, flex-start, center, 24px);
+    @include overlayFull(absolute, 0, 0, 0, 0);
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    transition: all 0.3s cubic-bezier(.215, .61, .355, 1);
+
+    >span {
+        @include dFlex($fd: column, $ai: center, $g: 24px);
+
+        >h3 {
+            font-family: 'Montserrat';
+            font-size: 32px;
+            text-align: center;
+            color: $specialBlue;
+            @include marginBlock0();
+        }
+
+        >img {
+            height: 32px;
+            width: 32px;
+            object-fit: cover;
+        }
+    }
+
+
+    >button {
+        font-family: 'Montserrat';
+        outline: none;
+        background: #fff;
+        border: 2px solid $specialBlue;
+        border-radius: 10px;
+        padding: 15px 30px;
+        color: $specialBlue;
+        font-size: 24px;
+        font-weight: 400;
+        cursor: pointer;
+        position: relative;
+    }
+}
+
+.fillDialogButton::before {
+    content: 'I got it';
+    cursor: pointer;
+    @include dFlex(row, center, center);
+    height: 100%;
+    width: 0%;
+    @include overlayFull(absolute, 0, 0, 0, 0);
+    @include blueGradientButtonAnimation();
+    color: #fff;
+    font-size: 24px;
+    border-radius: 10px;
+    animation: fillDialogButton 0.08s forwards;
+    transform: scale(1.05);
+}
+
+.fillDialogButtonGerman::before {
+    content: 'Verstanden';
+    cursor: pointer;
+    @include dFlex(row, center, center);
+    height: 100%;
+    width: 0%;
+    @include overlayFull(absolute, 0, 0, 0, 0);
+    @include blueGradientButtonAnimation();
+    color: #fff;
+    font-size: 24px;
+    border-radius: 10px;
+    animation: fillDialogButton 0.08s forwards;
+    transform: scale(1.05);
+}
+
+@keyframes fillDialogButton {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+        background: rgb(89, 136, 255);
+        @include blueGradientButtonAnimation();
+    }
+}

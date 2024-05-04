@@ -17,7 +17,7 @@
 }
 
 .wrapper {
-    @include dFlex($jc: space-between);
+    @include dFlex($jc: space-between, $ai: none);
 
     >.contact-info {
         width: 40%;
@@ -43,10 +43,19 @@
     }
 }
 
-.contact-form {
-    @include dFlex(column, $ai: center, $g: 32px);
+.form-and-dialog-container {
     width: 40%;
+    padding: 16px;
+    overflow: hidden;
+    position: relative;
+}
+
+.contact-form {
+    @include dFlex(column, space-between, center, 32px);
+    width: 100%;
+    height: 100%;
     font-family: 'Montserrat';
+    transition: all 0.3s cubic-bezier(.215, .61, .355, 1);
 
     >.input-name-container {
         width: 100%;
@@ -313,7 +322,7 @@
         }
     }
 
-    .contact-form {
+    .form-and-dialog-container {
         width: 50%;
     }
 }
@@ -329,18 +338,19 @@
 
     .wrapper {
         @include dFlex(column, $ai: center);
+        border: 2px solid blue;
 
         >.contact-info {
             width: 100%;
-            margin-bottom: 16px;
 
             >h3 {
                 font-size: 32px;
             }
         }
 
-        >.contact-form {
+        >.form-and-dialog-container {
             width: 100%;
+            padding: 16px 0px 0px 0px;
         }
     }
 
@@ -393,4 +403,8 @@
 
 .labelTextareaAnimation {
     transform: translateY(-32px);
+}
+
+.d-none {
+    display: none;
 }
