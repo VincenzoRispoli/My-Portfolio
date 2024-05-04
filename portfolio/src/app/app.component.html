@@ -1,3 +1,8 @@
 <app-header></app-header>
 <router-outlet></router-outlet>
 <app-footer id="footer"></app-footer>
+
+<div [ngStyle]="{'display': deviceOrizontally ? '' : 'none'}">
+    <span>Please turn the device into Portrait mode</span>
+    <img  src="assets/img/phone.png" alt="">
+</div> 

@@ -10,8 +10,8 @@
 
     >.ellipseHero {
         position: absolute;
-        left: -40px;
-        height: 600px;
+        left: -140px;
+        height: 750px;
         object-fit: cover;
     }
 }
@@ -147,8 +147,8 @@
 @media (max-width: 1050px) {
     .hero-section {
         >.ellipseHero {
-            height: 500px;
-            left: -32px;
+            height: 700px;
+            left: -227px;
         }
     }
 
@@ -174,8 +174,8 @@
 
         >.ellipseHero {
             position: absolute;
-            height: 600px;
-            left: -120px;
+            height: 700px;
+            left: -200px;
         }
     }
 
@@ -226,7 +226,7 @@
         @include dFlex(column-reverse, $ai: center);
 
         >.ellipseHero {
-            left: -200px;
+            left: -287px;
             top: 0;
         }
 

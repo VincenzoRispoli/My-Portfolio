@@ -1,0 +1,50 @@
+@import '../styles.scss';
+
+@media (min-width: 950px) {
+    div {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    div {
+        @include overlayFull(fixed, 0, 0, 0, 0);
+        @include dFlex(column, center, center, 24px);
+        overflow: hidden;
+        background: #fff;
+        height: 100vh;
+        width: 100vw;
+        z-index: 5;
+        padding: 32px;
+
+        >span {
+            font-size: 32px;
+            font-weight: 600;
+            text-align: center;
+            color: $specialBlue;
+        }
+
+        img {
+            height: 145px;
+            object-fit: cover;
+            transform: rotate(90deg);
+            animation-name: rotatePhone;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+        }
+    }
+
+    .overflowHidden {
+        overflow: hidden;
+    }
+}
+
+@keyframes rotatePhone {
+    0% {
+        transform: rotate(90deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}

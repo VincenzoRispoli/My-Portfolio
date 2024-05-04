@@ -6,6 +6,7 @@ import { MainContentComponent } from './main-content/main-content.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { ImprintComponent } from './imprint/imprint.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { HostListener } from '@angular/core';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -19,6 +20,27 @@ import 'aos/dist/aos.css';
 export class AppComponent implements OnInit {
   title = 'portfolio';
   constructor() { }
+  windowValues: number[] = []
+  deviceOrizontally: boolean = false;
+  windowHeight: number = 0;
+
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    this.windowHeight = window.innerHeight;
+  }
+
+  @HostListener('window:orientationchange', ['$event'])
+  onOrientationChange(event: Event) {
+    if (window.orientation == 90 && this.windowHeight < 950) {
+      this.deviceOrizontally = true;
+      document.body.classList.add('overflowHidden');
+      event.preventDefault();
+    } else if (window.orientation == 0) {
+      this.deviceOrizontally = false;
+      document.body.classList.remove('overflowHidden');
+    }
+  }
 
   ngOnInit(): void {
     AOS.init();
