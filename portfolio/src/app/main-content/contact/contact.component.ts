@@ -44,14 +44,12 @@ export class ContactComponent {
   }
 
   translateBack(label: string, value: string) {
-    if (value) {
-      if (label == 'name' && value.length == 0) {
-        this.animateName = false
-      } else if (label == 'email' && value.length == 0) {
-        this.animateEmail = false;
-      } else if (label == 'message' && value.length == 0) {
-        this.animateTextarea = false;
-      }
+    if (label == 'name' && (value == null || value.length == 0)) {
+      this.animateName = false
+    } else if (label == 'email' && (value == null || value.length == 0)) {
+      this.animateEmail = false;
+    } else if (label == 'message' && (value == null || value.length == 0)) {
+      this.animateTextarea = false;
     }
   }
 
@@ -90,32 +88,25 @@ export class ContactComponent {
   };
 
   onSubmit(ngForm: NgForm) {
-    console.log(ngForm);
-    this.dialogService.onFormSubmitted();
-    this.resetLabels();
-    ngForm.resetForm();
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+        .subscribe({
+          next: (response) => {
+            console.log(response);
+            ngForm.resetForm();
+          },
+          error: (error) => {
+            console.error(error);
+          },
+          complete: () => console.info('send post complete'),
+        });
+      this.dialogService.onFormSubmitted();
+      this.resetLabels();
+    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+
+      ngForm.resetForm();
+    }
   }
-
-  // onSubmit(ngForm: NgForm) {
-  //   if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-  //     this.http.post(this.post.endPoint, this.post.body(this.contactData))
-  //       .subscribe({
-  //         next: (response) => {
-  //           console.log(response);
-  //           ngForm.resetForm();
-  //         },
-  //         error: (error) => {
-  //           console.error(error);
-  //         },
-  //         complete: () => console.info('send post complete'),
-  //       });
-  //       this.dialogService.onFormSubmitted();
-  //       this.resetLabels();
-  //   } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
-  //     ngForm.resetForm();
-  //   }
-  // }
 }
 
 // sendMail.php

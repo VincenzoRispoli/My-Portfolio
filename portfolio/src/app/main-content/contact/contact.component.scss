@@ -338,7 +338,6 @@
 
     .wrapper {
         @include dFlex(column, $ai: center);
-        border: 2px solid blue;
 
         >.contact-info {
             width: 100%;
