@@ -12,7 +12,7 @@ import { TranslationService } from '../../shared/components/services/translation
   standalone: true,
   imports: [CommonModule, MenuMobileComponent, TranslateModule],
   templateUrl: './above-the-fold.component.html',
-  styleUrl: './above-the-fold.component.scss'
+  styleUrls: ['./above-the-fold.component.scss', './mediaQueries-atf.component.scss']
 })
 export class AboveTheFoldComponent implements OnInit {
 

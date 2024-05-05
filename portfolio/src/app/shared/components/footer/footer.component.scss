@@ -22,13 +22,14 @@
         }
 
 
-        >h2 {
+        >h3 {
             color: #fff;
             font-family: 'Montserrat';
-            font-size: 23px;
+            font-size: 24px;
             font-weight: 400;
             width: 50%;
             text-align: center;
+            @include marginBlock0();
         }
 
         >span {
@@ -82,52 +83,5 @@
         &:hover .underline {
             transform: translateX(0%);
         }
-
-
-    }
-}
-
-@media (max-width: 1050px) {
-    .footer {
-        >.logoCopySocial-container {
-            >.logo-container {
-                >.logo {
-                    width: 120px;
-                }
-            }
-
-            >span {
-                gap: 24px
-            }
-        }
-    }
-}
-
-@media (max-width: 768px) {
-    .footer {
-        padding: 48px 0;
-
-        >.logoCopySocial-container {
-            flex-direction: column;
-            align-items: center;
-            gap: 24px;
-            margin-bottom: 24px;
-
-            >.logo-container {
-                width: 100%;
-                justify-content: center;
-            }
-
-            >h2 {
-                @include marginBlock0();
-                width: 100%;
-            }
-
-            >span {
-                @include dFlex(row, center, center, 24px);
-                width: 100%;
-            }
-        }
-
     }
 }

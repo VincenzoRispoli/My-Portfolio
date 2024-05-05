@@ -1,0 +1,41 @@
+@import '../../../styles.scss';
+
+.fill-button::before {
+    @include dFlex(row, center, center);
+    @include blueGradientButtonAnimation();
+    @include overlayFull(absolute, $t: 0, $l: 0);
+    content: "Send a message";
+    width: 0%;
+    height: 100%;
+    color: #fff;
+    font-size: 24px;
+    border-radius: 10px;
+    animation: fillAnimation 0.09s forwards;
+    /* Duration and direction of animation */
+}
+
+.fillButtonGerman::before {
+    @include dFlex(row, center, center);
+    @include blueGradientButtonAnimation();
+    @include overlayFull(absolute, $t: 0, $l: 0);
+    content: "Nachricht senden";
+    width: 0%;
+    height: 100%;
+    color: #fff;
+    font-size: 24px;
+    border-radius: 10px;
+    animation: fillAnimation 0.09s forwards;
+    /* Duration and direction of animation */
+}
+
+@keyframes fillAnimation {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+        transform: scale(1.1);
+        @include blueGradientButtonAnimation();
+    }
+}

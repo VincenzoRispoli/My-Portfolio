@@ -1,70 +1,59 @@
 @import '../../../styles.scss';
 
-.introduction {
-    >.ellipse-Big-Container {
-        @include dFlex(row, center);
-        display: flex;
-        justify-content: center;
-        margin-top: -100px;
-        position: relative;
-
-        >img {
-            z-index: 2;
-        }
-    }
+.ellipse-Big-Container {
+    @include dFlex(row, center);
+    display: flex;
+    justify-content: center;
+    margin-top: -100px;
+    position: relative;
 }
 
 .letsWorkTogether-container {
     @include dFlex(row, space-between);
     overflow: hidden;
     padding: 56px;
+}
 
-    >.letsWorkTitle {
-        font-family: 'Baloo';
-        font-size: 6.2vw;
-        font-weight: 800;
-        color: #5988FF;
-        line-height: 1;
-        @include marginBlock0();
+.letsWorkTitle {
+    line-height: 1;
+    @include h2Styles($specialBlue);
+    @include marginBlock0();
+}
+
+.description-container {
+    @include dFlex(column, $ai: center);
+    width: 50%;
+}
+
+p {
+    font-size: 24px;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    @include marginBlock0();
+    margin-bottom: 32px;
+}
+
+.btn-container {
+    height: auto;
+    @include dFlex(row, center, center);
+    width: 100%;
+
+    >a {
+        position: relative;
+        background: #fff;
+        text-decoration: none;
+        border-radius: 10px;
+        border: 2px solid $specialBlue;
+        padding: 15px 30px;
+        font-size: 24px;
+        color: $specialBlue;
+        font-family: 'Montserrat';
+        cursor: pointer;
     }
+}
 
-    >img {
-        width: 50%;
-        object-fit: cover;
-    }
-
-    >.description-container {
-        @include dFlex(column, $ai: center);
-        width: 50%;
-
-        >p {
-            font-size: 24px;
-            font-family: 'Montserrat';
-            font-weight: 400;
-            @include marginBlock0();
-            margin-bottom: 32px;
-        }
-
-        >div {
-            height: auto;
-            @include dFlex(row, center, center);
-            width: 100%;
-
-            >a {
-                position: relative;
-                // overflow: hidden;
-                background: #fff;
-                text-decoration: none;
-                border-radius: 10px;
-                border: 2px solid $specialBlue;
-                padding: 15px 30px;
-                font-size: 24px;
-                color: $specialBlue;
-                font-family: 'Montserrat';
-                cursor: pointer;
-            }
-        }
-    }
+.ellipseIntroBig {
+    z-index: 2;
 }
 
 .ellipseIntroSmall {
@@ -73,175 +62,9 @@
     object-fit: contain;
     @include overlayFull(absolute, $r: 185px, $b: -25px);
     z-index: 2;
-}
-
-.fill-button::before {
-    @include dFlex(row, center, center);
-    @include blueGradientButtonAnimation();
-    @include overlayFull(absolute, $t: 0, $l: 0);
-    content: "Send a message";
-    width: 0%;
-    height: 100%;
-    color: #fff;
-    font-size: 24px;
-    border-radius: 10px;
-    animation: fillAnimation 0.09s forwards;
-    /* Duration and direction of animation */
-}
-
-.fillButtonGerman::before {
-    @include dFlex(row, center, center);
-    @include blueGradientButtonAnimation();
-    @include overlayFull(absolute, $t: 0, $l: 0);
-    content: "Nachricht senden";
-    width: 0%;
-    height: 100%;
-    color: #fff;
-    font-size: 24px;
-    border-radius: 10px;
-    animation: fillAnimation 0.09s forwards;
-    /* Duration and direction of animation */
-}
-
-
-@keyframes fillAnimation {
-    0% {
-        width: 0%;
-    }
-
-    100% {
-        width: 100%;
-        transform: scale(1.1);
-        @include blueGradientButtonAnimation();
-    }
+    right: 150px;
 }
 
 .flexColumnGerman {
     @include dFlex(column, $ai: center, $g: 16px);
-}
-
-@media screen and (min-width: 1051px) {
-    .letsWorkTogether-container {
-        >.letsWorkTitle {
-            font-size: 96px;
-        }
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .letsWorkTogether-container {
-        >.letsWorkTitle {
-            font-size: 118px;
-        }
-    }
-}
-
-@media (max-width: 1050px) {
-
-    .letsWorkTogether-container {
-        flex-direction: column;
-
-        >.letsWorkTitle {
-            font-size: 76px;
-        }
-
-        >.description-container {
-            width: 100%;
-        }
-    }
-
-
-}
-
-.ellipseIntroSmall {
-    right: 150px;
-}
-
-
-@media (max-width: 768px) {
-    .introduction {
-        margin-top: -75px;
-
-        >.ellipse-Big-Container {
-            margin-top: -77px;
-            margin-bottom: 32px;
-            position: relative;
-
-            >img {
-                height: 120px;
-            }
-
-            >.ellipseIntroSmall {
-                height: 60px;
-            }
-        }
-    }
-
-    .ellipseIntroSmall {
-        right: 50px;
-    }
-
-    .letsWorkTogether-container {
-        @include dFlex(column, $ai: flex-start, $g: 24px);
-        padding: 32px;
-
-        >.letsWorkTitle {
-            font-size: 42px;
-        }
-
-        >.description-container {
-            width: 100%;
-        }
-    }
-
-}
-
-@media (max-width: 430px) {
-    .introduction {
-        .ellipse-Big-Container {
-            >img {
-                height: 100px;
-            }
-
-            >.ellipseIntroSmall {
-                height: 40px;
-            }
-        }
-    }
-
-    .letsWorkTogether-container {
-        padding: 24px;
-
-        >.letsWorkTitle {
-            font-size: 28px;
-        }
-
-        >.description-container {
-            >p {
-                font-size: 16px;
-            }
-
-            >div {
-                >a {
-                    padding: 15px 15px;
-                    font-size: 18px;
-                }
-            }
-        }
-    }
-
-    .ellipseIntroSmall {
-        right: 16px;
-        width: 60px;
-        height: 60px;
-    }
-
-    .fill-button::before {
-        font-size: 18px;
-    }
-
-    .fillButtonGerman::before {
-        font-size: 18px;
-    }
-
 }

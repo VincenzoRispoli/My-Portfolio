@@ -1,0 +1,74 @@
+@import '../../../styles.scss';
+
+.checkbox-container {
+    width: 100%;
+
+    >.chekbox-and-policy-wrapper {
+        @include dFlex($ai: center, $g: 8px);
+
+        >.label-and-checkbox-wrapper {
+            @include dFlex(row, center, center);
+            position: relative;
+            border-radius: 50px;
+            padding: 5px;
+            z-index: 1;
+
+            &:hover {
+                background: #a0bbff;
+
+            }
+
+            >.custom-checkbox {
+                display: inline-block;
+                height: 24px;
+                width: 24px;
+                min-height: 24px;
+                min-width: 24px;
+                border: 2px solid $specialBlue;
+                z-index: 3;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            >.input-checkbox {
+                position: absolute;
+                left: -9999px;
+            }
+
+            >.checkmark {
+                @include overlayFull(absolute, 7px, 4px);
+                height: 21px;
+                width: 25px;
+                z-index: 1;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+        }
+
+        >.privacy-policy-container {
+            >a {
+                color: $specialBlue;
+                text-decoration: none;
+                width: 20%;
+
+                &:hover {
+                    color: blue;
+                    text-decoration: underline;
+                    font-weight: 700;
+                }
+            }
+
+        }
+    }
+
+    >.requiredBanner {
+        margin-top: 8px;
+        color: red;
+    }
+
+}

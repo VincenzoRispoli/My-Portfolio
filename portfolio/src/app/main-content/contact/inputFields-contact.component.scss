@@ -1,0 +1,60 @@
+@import '../../../styles.scss';
+
+.contact-form {
+    @include dFlex(column, space-between, center, 32px);
+    width: 100%;
+    height: 100%;
+    font-family: 'Montserrat';
+    transition: all 0.3s cubic-bezier(.215, .61, .355, 1);
+
+    >.input-container {
+        width: 100%;
+
+        >.label-and-input-wrapper {
+            position: relative;
+            width: 100%;
+
+            .input-label {
+                @include labelNameAndEmail(22%, 16px);
+            }
+
+            .input {
+                @include inputStyle(15px 50px 15px 25px);
+            }
+
+        }
+    }
+
+    >.textarea-container {
+        width: 100%;
+
+        >.label-and-textarea-wrapper {
+            position: relative;
+            width: 100%;
+
+            >.message-label {
+                @include labelNameAndEmail(8%, 16px);
+            }
+
+            >.textarea {
+                @include inputStyle(15px 42px 15px 25px);
+                resize: none;
+            }
+        }
+    }
+
+    >button {
+        @include submitButtonStyle();
+    }
+}
+
+.frame {
+    position: absolute;
+    top: 11px;
+    right: 16px;
+}
+
+.requiredBanner {
+    margin-top: 8px;
+    color: red;
+}

@@ -16,12 +16,12 @@
         <div class="form-and-dialog-container">
             <form [ngStyle]="{'transform': dialogService.moveForm ? 'translateX(150%)' : 'translateX(0%)'}"
                 class="contact-form" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-                <div data-aos="fade-left" data-aos-offset="50" data-aos-once="true" class="input-name-container">
-                    <div class="label-and-inputName-wrapper">
-                        <label [ngClass]="{labelAnimation: animateName}" class="name-label" for="name">{{"your-name" |
+                <div data-aos="fade-left" data-aos-offset="50" data-aos-once="true" class="input-container">
+                    <div class="label-and-input-wrapper">
+                        <label [ngClass]="{labelAnimation: animateName}" class="input-label" for="name">{{"your-name" |
                             translate}}</label>
                         <input (focus)="translateUp('name')" (blur)="translateBack('name', contactData.name)"
-                            [(ngModel)]="contactData.name" id="name" name="name" class="input-name" type="text"
+                            [(ngModel)]="contactData.name" id="name" name="name" class="input" type="text"
                             minlength="3" #name="ngModel" required>
                         @if(!name.valid && name.touched){
                         <img class="frame" src="assets/icons/frame(!).png" alt="">
@@ -36,13 +36,13 @@
                     </div>
                 </div>
 
-                <div data-aos="fade-left" data-aos-offset="100" data-aos-once="true" class="input-email-container">
-                    <div class="label-and-inputEmail-wrapper">
-                        <label [ngClass]="{labelAnimation: animateEmail}" class="email-label" for="email">{{"your-email"
+                <div data-aos="fade-left" data-aos-offset="100" data-aos-once="true" class="input-container">
+                    <div class="label-and-input-wrapper">
+                        <label [ngClass]="{labelAnimation: animateEmail}" class="input-label" for="email">{{"your-email"
                             |
                             translate}}</label>
                         <input (focus)="translateUp('email')" (blur)="translateBack('email', contactData.email)"
-                            [(ngModel)]="contactData.email" id="email" name="email" class="input-email" type="email"
+                            [(ngModel)]="contactData.email" id="email" name="email" class="input" type="email"
                             #email="ngModel" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
                         @if(!email.valid && email.touched){
                         <img class="frame" src="assets/icons/frame(!).png" alt="">
@@ -71,7 +71,7 @@
                         <img class="frame" src="assets/icons/frameV.png" alt="">
                         }
                     </div>
-                    <div class="isRequired">
+                    <div class="requiredBanner">
                         @if(!message.valid && message.touched){
                         <span>{{"message-required" | translate}}</span>
                         }

@@ -1,0 +1,78 @@
+@import '../../../../styles.scss';
+
+@media (min-width: 769px) {
+    .rowReverse {
+        flex-direction: row-reverse;
+    }
+
+    .flexEnd {
+        text-align: end;
+        align-items: flex-end;
+    }
+}
+
+@media (max-width: 1050px) {
+    .project-infos {
+        >h3 {
+            font-size: 32px;
+        }
+
+        >span {
+            font-size: 20px;
+        }
+
+        >p {
+            margin-bottom: 16px;
+        }
+
+        >.project-btn-container {
+            >.gitHub-btn {
+                padding: 8px 15px;
+            }
+
+            >.liveTest-btn {
+                padding: 8px 15px;
+            }
+        }
+
+    }
+}
+
+@media (max-width: 768px) {
+    .project {
+        @include dFlex(column, $ai: center, $g: 32px);
+
+        >img {
+            width: 100%;
+        }
+
+        >.project-infos {
+            width: 100%;
+            align-items: center;
+            text-align: center;
+
+            >.project-btn-container {
+                justify-content: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 430px) {
+    .project {
+        >.project-infos {
+            >.project-btn-container {
+
+                >.gitHub-btn,
+                .liveTest-btn {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .fill-button::before,
+    .fill-LiveTest-button::before {
+        font-size: 16px;
+    }
+}

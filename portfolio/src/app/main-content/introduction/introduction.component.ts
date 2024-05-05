@@ -10,7 +10,7 @@ import { TranslationService } from '../../shared/components/services/translation
   standalone: true,
   imports: [CommonModule, TranslateModule],
   templateUrl: './introduction.component.html',
-  styleUrl: './introduction.component.scss'
+  styleUrls: ['./introduction.component.scss', './mediaQueries-introd.component.scss', './fillBtnStyles-introd.component.scss']
 })
 export class IntroductionComponent {
 

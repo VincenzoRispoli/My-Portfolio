@@ -12,10 +12,7 @@
     margin-bottom: 96px;
 
     >h2 {
-        font-size: 6.2vw;
-        color: $specialBlue;
-        font-weight: 800;
-        font-family: 'Baloo';
+        @include h2Styles($specialBlue);
         @include marginBlock0();
     }
 

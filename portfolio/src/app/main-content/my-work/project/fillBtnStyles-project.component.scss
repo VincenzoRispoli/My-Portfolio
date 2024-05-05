@@ -1,0 +1,41 @@
+@import '../../../../styles.scss';
+
+@keyframes fillAnimation {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+        transform: scale(1.05);
+        @include blueGradientButtonAnimation();
+    }
+}
+
+.fill-button::before {
+    @include dFlex(row, center, center);
+    @include blueGradientButtonAnimation();
+    @include overlayFull(absolute, $t: 0, $l: 0);
+    content: "Github";
+    width: 0%;
+    height: 100%;
+    color: #fff;
+    font-size: 24px;
+    border-radius: 10px;
+    animation: fillAnimation 0.10s forwards;
+    /* Duration and direction of animation */
+}
+
+.fill-LiveTest-button::before {
+    @include dFlex(row, center, center);
+    @include blueGradientButtonAnimation();
+    @include overlayFull(absolute, $t: 0, $l: 0);
+    content: "Live Test";
+    width: 0%;
+    height: 100%;
+    color: #fff;
+    font-size: 24px;
+    border-radius: 10px;
+    animation: fillAnimation 0.0s forwards;
+    /* Duration and direction of animation */
+}

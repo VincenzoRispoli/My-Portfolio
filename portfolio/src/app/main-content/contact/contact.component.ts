@@ -14,7 +14,7 @@ import { SuccessPopUpComponent } from './success-pop-up/success-pop-up.component
   standalone: true,
   imports: [CommonModule, FormsModule, TranslateModule, SuccessPopUpComponent],
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss'
+  styleUrls: ['./contact.component.scss', './mediaQueries-contact.component.scss', './inputFields-contact.component.scss', './checkboxStyle.component.scss']
 })
 export class ContactComponent {
 

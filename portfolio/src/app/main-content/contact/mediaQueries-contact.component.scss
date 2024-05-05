@@ -1,0 +1,111 @@
+@import '../../../styles.scss';
+
+@keyframes fillFormButton {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+        background: rgb(89, 136, 255);
+        @include blueGradientButtonAnimation();
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .contact-section {
+        >h2 {
+            font-size: 96px;
+        }
+    }
+}
+
+@media (max-width: 1050px) {
+    .contact-section {
+        padding: 90px 56px 56px 56px;
+    }
+
+    .ellipseSmallContact {
+        @include overlayFull(absolute, 700px, 24px);
+        height: 50px;
+    }
+
+    .wrapper {
+        >.contact-info {
+            width: 45%;
+        }
+    }
+
+    .form-and-dialog-container {
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 84px 32px;
+
+        >h2 {
+            font-size: 64px;
+        }
+    }
+
+    .wrapper {
+        @include dFlex(column, $ai: center);
+
+        >.contact-info {
+            width: 100%;
+
+            >h3 {
+                font-size: 32px;
+            }
+        }
+
+        >.form-and-dialog-container {
+            width: 100%;
+            padding: 16px 0px 0px 0px;
+        }
+    }
+
+    .ellipseSmallContact {
+        top: 1000px;
+        z-index: -1;
+    }
+
+    .arrow-up-container {
+        left: 40px;
+    }
+
+
+}
+
+@media (max-width: 430px) {
+    .contact-section {
+        >h2 {
+            font-size: 48px;
+        }
+    }
+
+    .wrapper {
+        >.contact-info {
+            >h3 {
+                font-size: 24px;
+            }
+
+        }
+
+        >.contact-form {
+            >button {
+                padding: 8px 15px;
+                font-size: 16px;
+            }
+        }
+
+    }
+
+    .arrow-up-container {
+        left: 24px;
+        width: 32px;
+        height: 32px;
+    }
+}

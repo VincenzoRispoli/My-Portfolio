@@ -8,7 +8,7 @@ import { TranslationService } from '../services/translation.service';
   standalone: true,
   imports: [CommonModule, TranslateModule],
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.scss'
+  styleUrls: ['./footer.component.scss', './mediaQueries-footer.components.scss']
 })
 export class FooterComponent {
   translate = inject(TranslationService)

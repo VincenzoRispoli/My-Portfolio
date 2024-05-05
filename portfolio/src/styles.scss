@@ -18,6 +18,14 @@ $specialBlue: #5988FF;
     gap: $g
 }
 
+@mixin h2Styles($col) {
+    font-family: 'Baloo';
+    font-weight: 800;
+    height: auto;
+    font-size: 6.2vw;
+    color: $col;
+}
+
 @mixin marginBlock0() {
     margin-block-start: 0;
     margin-block-end: 0;
@@ -29,6 +37,47 @@ $specialBlue: #5988FF;
     right: $r;
     bottom: $b;
     left: $l;
+}
+
+@mixin labelNameAndEmail($t, $l) {
+    position: absolute;
+    top: $t;
+    left: $l;
+    background: #fff;
+    padding: 4px;
+    transition: all 0.3s cubic-bezier(.215, .61, .355, 1);
+    cursor: pointer;
+}
+
+@mixin inputStyle($p) {
+    border-radius: 10px;
+    border: 2px solid #5988FF;
+    padding: $p;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    font-family: 'Montserrat';
+}
+
+@mixin submitButtonStyle() {
+    border-radius: 10px;
+    border: 2px solid $specialBlue;
+    color: $specialBlue;
+    padding: 15px 30px;
+    font-size: 24px;
+    background: #fff;
+    position: relative;
+    cursor: pointer;
+}
+
+@mixin projectButton($bg, $col, $bordcolor){
+    border-radius: 10px;
+    padding: 15px 30px;
+    border: 2px solid $bordcolor;
+    color: $col;
+    background: $bg;
+    font-size: 24px;
+    text-decoration: none;
 }
 
 /* You can add global styles to this file, and also import other style files */

@@ -8,7 +8,7 @@ import { TranslationService } from '../../../shared/components/services/translat
   standalone: true,
   imports: [CommonModule, TranslateModule],
   templateUrl: './project.component.html',
-  styleUrl: './project.component.scss'
+  styleUrls: ['./project.component.scss', './mediaQueries-project.component.scss', './fillBtnStyles-project.component.scss']
 })
 export class ProjectComponent {
   translate = inject(TranslationService);

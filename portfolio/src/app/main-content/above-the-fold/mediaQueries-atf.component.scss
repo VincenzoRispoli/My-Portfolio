@@ -1,0 +1,165 @@
+@import '../../../styles.scss';
+@media screen and (min-width:1050px) {
+    .wrapper {
+        >.titlesAndSocialWrapper {
+            >.titles {
+                >h1 {
+                    font-size: 38px;
+                }
+
+                >h2 {
+                    font-size: 96px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .wrapper {
+        >.titlesAndSocialWrapper {
+            >.titles {
+                >h1 {
+                    font-size: 48px;
+                }
+
+                >h2 {
+                    font-size: 118px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1050px) {
+    .hero-section {
+        >.ellipseHero {
+            height: 700px;
+            left: -227px;
+        }
+    }
+
+    .wrapper {
+        >.titlesAndSocialWrapper {
+            >.titles {
+                >h1 {
+                    font-size: 32px;
+                }
+
+                >h2 {
+                    font-size: 72px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .hero-section {
+        position: none;
+
+        >.ellipseHero {
+            position: absolute;
+            height: 700px;
+            left: -200px;
+        }
+    }
+
+    .vector-bar-and-socialNetwork-container {
+        display: none;
+    }
+
+    .wrapper {
+        @include dFlex(column-reverse, $jc: space-between);
+        z-index: 2;
+        padding: 0 16px;
+
+        >.profil-photo-container {
+            width: 100%;
+
+            >.me {
+                width: 350px;
+            }
+        }
+
+        >.titlesAndSocialWrapper {
+            width: 75%;
+            align-items: flex-start;
+            margin-top: 200px;
+
+            >.titles {
+                margin-bottom: 0;
+                min-width: 350px;
+
+                >h1 {
+                    color: #fff;
+                    font-size: 28px;
+                }
+
+                >h2 {
+                    color: #fff;
+                    font-size: 64px;
+                }
+            }
+        }
+
+    }
+
+}
+
+@media (max-width: 430px) {
+    .hero-section {
+        @include dFlex(column-reverse, $ai: center);
+
+        >.ellipseHero {
+            left: -287px;
+            top: 0;
+        }
+
+        >.me {
+            position: static;
+            left: 0px;
+            height: auto;
+            width: 320px;
+            z-index: 2;
+        }
+    }
+
+    .wrapper {
+        width: 100%;
+
+        >.titlesAndSocialWrapper {
+            width: 100%;
+            align-items: flex-start;
+
+            >.titles {
+                margin-bottom: 0;
+
+                >h1 {
+                    color: #fff;
+                    font-size: 24px;
+                }
+
+                >h2 {
+                    color: #fff;
+                    font-size: 48px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 380px) {
+    .hero-section {
+        >.wrapper {
+            >.profil-photo-container {
+                >.me {
+                    height: auto;
+                    width: 270px;
+                }
+            }
+        }
+    }
+
+}

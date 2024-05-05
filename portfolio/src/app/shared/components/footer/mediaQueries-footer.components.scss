@@ -1,0 +1,45 @@
+@import '../../../../styles.scss';
+@media (max-width: 1050px) {
+    .footer {
+        >.logoCopySocial-container {
+            >.logo-container {
+                >.logo {
+                    width: 120px;
+                }
+            }
+
+            >span {
+                gap: 24px
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 48px 0;
+
+        >.logoCopySocial-container {
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+            margin-bottom: 24px;
+
+            >.logo-container {
+                width: 100%;
+                justify-content: center;
+            }
+
+            >h3 {
+                @include marginBlock0();
+                width: 100%;
+            }
+
+            >span {
+                @include dFlex(row, center, center, 24px);
+                width: 100%;
+            }
+        }
+
+    }
+}
