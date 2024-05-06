@@ -11,8 +11,8 @@
 
 .ellipseHero {
     position: absolute;
-    left: -140px;
-    height: 750px;
+    height: 90vh;
+    left: -180px;
     object-fit: cover;
 }
 
@@ -28,7 +28,7 @@
         @include dFlex($jc: center, $ai: flex-end);
 
         .me {
-            width: 50vh;
+            width: 55vh;
             object-fit: cover;
         }
     }
@@ -64,7 +64,7 @@ h2 {
 }
 
 .vector-bar-and-socialNetwork-container {
-    @include dFlex(row, space-between, center);
+    @include dFlex(row, space-between, flex-end);
     width: 100%;
 }
 
@@ -86,18 +86,22 @@ h2 {
 .vector-bar {
     display: block;
     background: $specialBlue;
-    height: 200px;
+    height: 25vh;
     width: 2px;
 }
 
 
 .social-network-container {
-    @include dFlex(column, $ai: center);
-    gap: 25px;
+    @include dFlex(column, $ai: center, $g: 16px);
+    padding: 8px;
     z-index: 1;
 
     >a {
+        height: 6vh;
+        @include dFlex(row, center, center);
+
         >.social {
+            height: 6vh;
             cursor: pointer;
             transition: all 0.3s cubic-bezier(.215, .61, .355, 1);
 

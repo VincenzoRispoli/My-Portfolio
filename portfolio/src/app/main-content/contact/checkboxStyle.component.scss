@@ -2,6 +2,7 @@
 
 .checkbox-container {
     width: 100%;
+    
 
     >.chekbox-and-policy-wrapper {
         @include dFlex($ai: center, $g: 8px);
