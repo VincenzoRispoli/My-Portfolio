@@ -4,8 +4,8 @@
         <img class="ellipseIntroSmall" src="assets/img/ellipseIntroSmall.png" alt="">
     </div>
     <div [ngClass]="{flexColumnGerman: !menuService.isOnEnglish}" class="letsWorkTogether-container">
-        <h2 data-aos="fade-up" data-aos-duration="125" data-aos-offset="150" data-aos-once="true" class="letsWorkTitle"
-            [ngStyle]="{'text-align': menuService.isOnEnglish ? 'start' :'center'}">
+        <h2 data-aos="fade-up" data-aos-duration="125" data-aos-offset="150" data-aos-once="true"
+            [ngClass]="{germanTitle: !menuService.isOnEnglish, englishTitle:menuService.isOnEnglish}">
             {{"letsWorkTogether" | translate}}
         </h2>
         <div data-aos="fade-left" [attr.data-aos-offset]="menuService.isOnEnglish ? '100' : '150'"

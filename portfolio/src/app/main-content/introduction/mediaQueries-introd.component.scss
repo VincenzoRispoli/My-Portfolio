@@ -21,7 +21,7 @@
     .letsWorkTogether-container {
         flex-direction: column;
 
-        >.letsWorkTitle {
+        >h2 {
             font-size: 76px;
         }
 
@@ -55,7 +55,7 @@
         @include dFlex(column, $ai: flex-start, $g: 24px);
         padding: 32px;
 
-        >.letsWorkTitle {
+        >h2 {
             font-size: 42px;
         }
 
@@ -71,6 +71,7 @@
     .fillButtonGerman::before {
         font-size: 18px;
     }
+
 }
 
 
@@ -87,10 +88,10 @@
 
     .letsWorkTogether-container {
         padding: 24px;
-    }
 
-    .letsWorkTitle {
-        font-size: 28px;
+        >h2 {
+            font-size: 30px;
+        }
     }
 
     p {
@@ -102,5 +103,14 @@
             padding: 15px 15px;
             font-size: 18px;
         }
+    }
+
+    .germanTitle{
+        font-size: 30px;
+        text-align:start;
+    }
+
+    .englishTitle{
+        font-size: 32px;
     }
 }

@@ -12,13 +12,14 @@
     @include dFlex(row, space-between);
     overflow: hidden;
     padding: 56px;
+
+    >h2 {
+        line-height: 1;
+        @include h2Styles($specialBlue);
+        @include marginBlock0();
+    }
 }
 
-.letsWorkTitle {
-    line-height: 1;
-    @include h2Styles($specialBlue);
-    @include marginBlock0();
-}
 
 .description-container {
     @include dFlex(column, $ai: center);
@@ -67,4 +68,12 @@ p {
 
 .flexColumnGerman {
     @include dFlex(column, $ai: center, $g: 16px);
+}
+
+.germanTitle{
+    text-align: center;
+}
+
+.englishTitle{
+    text-align: start;
 }
