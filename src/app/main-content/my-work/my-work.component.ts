@@ -16,7 +16,7 @@ import { MenuMobileService } from '../../shared/components/services/menu-mobile.
 export class MyWorkComponent {
   translate = inject(TranslationService);
   menuService = inject(MenuMobileService);
-  
+
   constructor() {
 
   }
@@ -24,7 +24,7 @@ export class MyWorkComponent {
   projectsList = [
     {
       title: 'Join',
-      image: 'join.png',
+      image: 'join.jpg',
       technologies: 'HTML | CSS | Javascript',
       description: "join-decription",
       linkGithub: 'https://github.com/VincenzoRispoli/Join',
@@ -38,6 +38,14 @@ export class MyWorkComponent {
       linkGithub: 'https://github.com/VincenzoRispoli/El-Pollo-Loco',
       linkLiveTest: 'https://elpolloloco.vincenzo-rispoli.de/',
     },
+    {
+      title: 'DABubble',
+      image: 'dabubble.png',
+      technologies: 'HTML | CSS | Typescript | Angular |Firebase',
+      description: "da-bubble-description",
+      linkGithub: 'https://github.com/VincenzoRispoli/DABubble',
+      linkLiveTest: 'https://dabubble.vincenzo-rispoli.de/',
+    }
   ]
 }
 
