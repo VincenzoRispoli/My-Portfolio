@@ -11,6 +11,7 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
 import { TranslationService } from './shared/components/services/translation.service';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { MenuMobileService } from './shared/components/services/menu-mobile.service';
 
 @Component({
   selector: 'app-root',
@@ -21,7 +22,8 @@ import 'aos/dist/aos.css';
 })
 export class AppComponent implements OnInit {
 
-  translate = inject(TranslationService)
+  translate = inject(TranslationService);
+  menuService = inject(MenuMobileService);
 
   title = 'portfolio';
   constructor() { }
@@ -69,7 +71,6 @@ export class AppComponent implements OnInit {
       once: false, // whether animation should happen only once - while scrolling down
       mirror: false, // whether elements should animate out while scrolling past them
       anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
-
     });
   }
 

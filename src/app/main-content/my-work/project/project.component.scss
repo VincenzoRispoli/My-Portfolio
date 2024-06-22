@@ -5,16 +5,22 @@
     margin-bottom: 120px;
     overflow: hidden;
 
-    >img {
+    >a {
         width: 50%;
-        object-fit: cover;
-        z-index: 1;
-        box-shadow: 10px 5px 20px lightblue;
-        transition: all 0.25s cubic-bezier(.215, .61, .355, 1);
+        height: 50%;
 
-        &:hover {
-            transform: scale(0.97);
-            cursor: pointer;
+        >img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+            box-shadow: 10px 5px 20px lightblue;
+            transition: all 0.25s cubic-bezier(.215, .61, .355, 1);
+
+            &:hover {
+                transform: scale(0.97);
+                cursor: pointer;
+            }
         }
     }
 }

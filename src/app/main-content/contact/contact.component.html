@@ -21,8 +21,8 @@
                         <label [ngClass]="{labelAnimation: animateName}" class="input-label" for="name">{{"your-name" |
                             translate}}</label>
                         <input (focus)="translateUp('name')" (blur)="translateBack('name', contactData.name)"
-                            [(ngModel)]="contactData.name" id="name" name="name" class="input" type="text"
-                            minlength="3" #name="ngModel" required>
+                            [(ngModel)]="contactData.name" id="name" name="name" class="input" type="text" minlength="3"
+                            #name="ngModel" required>
                         @if(!name.valid && name.touched){
                         <img class="frame" src="assets/icons/frame(!).png" alt="">
                         } @else if (name.valid) {
@@ -86,8 +86,8 @@
                             <img [ngStyle]="{'display': checkbox.valid ? '' : 'none'}" class="checkmark"
                                 src="assets/icons/checkmark.svg" alt="">
                         </div>
-                        <span class="privacy-policy-container">{{"check-text1" | translate}} <a
-                                href="/privacy-policy">{{"privacy-policy" | translate}}</a>
+                        <span class="privacy-policy-container">{{"check-text1" | translate}} 
+                            <a href="privacy-policy">{{"privacy-policy" | translate}}</a>
                             {{"check-text2" | translate}}
                         </span>
                     </div>

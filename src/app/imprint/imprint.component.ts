@@ -3,6 +3,7 @@ import { Component, inject } from '@angular/core';
 import { MenuMobileComponent } from '../main-content/above-the-fold/menu-mobile/menu-mobile.component';
 import { TranslationService } from '../shared/components/services/translation.service';
 import { TranslateModule } from '@ngx-translate/core';
+import { MenuMobileService } from '../shared/components/services/menu-mobile.service';
 
 @Component({
   selector: 'app-imprint',
@@ -13,6 +14,4 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class ImprintComponent {
   translate = inject(TranslationService);
-
-
 }

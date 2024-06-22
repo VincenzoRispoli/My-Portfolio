@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { TranslationService } from '../services/translation.service';
+import { MenuMobileService } from '../services/menu-mobile.service';
 
 @Component({
   selector: 'app-footer',
@@ -11,5 +12,6 @@ import { TranslationService } from '../services/translation.service';
   styleUrls: ['./footer.component.scss', './mediaQueries-footer.components.scss']
 })
 export class FooterComponent {
-  translate = inject(TranslationService)
+  translate = inject(TranslationService);
+  menuService = inject(MenuMobileService);
 }

@@ -2,8 +2,9 @@
 <router-outlet></router-outlet>
 <app-footer id="footer"></app-footer>
 
+
 <!-- Portrait Overlay Mobile -->
 <div [ngStyle]="{'display': deviceOrizontally ? '' : 'none'}">
     <span>{{"portrait" | translate}}</span>
-    <img  src="assets/img/phone.png" alt="">
+    <img src="assets/img/phone.png" alt="">
 </div>

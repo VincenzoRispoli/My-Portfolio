@@ -3,6 +3,7 @@ import { Component, inject } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { TranslationService } from '../shared/components/services/translation.service';
 import { MenuMobileComponent } from '../main-content/above-the-fold/menu-mobile/menu-mobile.component';
+import { MenuMobileService } from '../shared/components/services/menu-mobile.service';
 
 
 @Component({
@@ -13,6 +14,8 @@ import { MenuMobileComponent } from '../main-content/above-the-fold/menu-mobile/
   styleUrl: './privacy-policy.component.scss'
 })
 export class PrivacyPolicyComponent {
+
+  menuService = inject(MenuMobileService);
 
   isHover: boolean = false;
   translate = inject(TranslationService)

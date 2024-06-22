@@ -9,9 +9,11 @@
             <a href="#my-work">{{"my-work" | translate}}</a>
             <div class="languages-container" (click)="menuService.onLanguageChange()">
                 <img (click)="translate.switchToOtherLang('de')" class="flag"
-                    [ngStyle]="{'display': menuService.isOnEnglish ? '': 'none'}" src="assets/img/germanFlag.png" alt="">
+                    [ngStyle]="{'display': menuService.isOnEnglish ? '': 'none'}" src="assets/img/germanFlag.png"
+                    alt="">
                 <img (click)="translate.switchToOtherLang('en')" class="flag"
-                    [ngStyle]="{'display': menuService.isOnEnglish ? 'none' : ''}" src="assets/img/englishFlag.png" alt="">
+                    [ngStyle]="{'display': menuService.isOnEnglish ? 'none' : ''}" src="assets/img/englishFlag.png"
+                    alt="">
             </div>
         </div>
         <div [ngClass]="{logoPaddingScrolled: pageScrolled, logoPaddingNormal: !pageScrolled}" (click)="openMenu()"

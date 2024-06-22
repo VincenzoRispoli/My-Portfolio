@@ -41,7 +41,7 @@ export class MyWorkComponent {
     {
       title: 'DABubble',
       image: 'dabubble.png',
-      technologies: 'HTML | CSS | Typescript | Angular |Firebase',
+      technologies: 'HTML | CSS | Typescript | Angular | Firebase',
       description: "da-bubble-description",
       linkGithub: 'https://github.com/VincenzoRispoli/DABubble',
       linkLiveTest: 'https://dabubble.vincenzo-rispoli.de/',

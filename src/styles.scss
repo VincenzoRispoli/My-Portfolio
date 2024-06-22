@@ -70,7 +70,7 @@ $specialBlue: #5988FF;
     cursor: pointer;
 }
 
-@mixin projectButton($bg, $col, $bordcolor){
+@mixin projectButton($bg, $col, $bordcolor) {
     border-radius: 10px;
     padding: 15px 30px;
     border: 2px solid $bordcolor;
@@ -101,6 +101,15 @@ body {
     width: 100%;
     position: relative;
     max-width: 1440px;
+
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $specialBlue;
+        border-radius: 100px;
+    }
 }
 
 

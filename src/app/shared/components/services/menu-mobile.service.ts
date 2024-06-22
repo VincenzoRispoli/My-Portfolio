@@ -9,7 +9,8 @@ export class MenuMobileService {
   menuIsOpen: boolean = false;
   isOnEnglish: boolean = true;
 
-  constructor() { }
+  constructor() {
+  }
 
   openMenuInNavbar() {
     this.translateX = !this.translateX;
